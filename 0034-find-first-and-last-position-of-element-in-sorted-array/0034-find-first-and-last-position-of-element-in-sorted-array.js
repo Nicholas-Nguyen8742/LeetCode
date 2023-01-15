@@ -4,5 +4,7 @@
  * @return {number[]}
  */
 var searchRange = function(nums, target) {
-    return nums.indexOf(target) >= 0 && nums.lastIndexOf(target) >= 0 ? [nums.indexOf(target), nums.lastIndexOf(target)] : [-1, -1];
+    const start = nums.indexOf(target);
+    const end = nums.lastIndexOf(target);
+    return start >= 0 && end >= 0 ? [start, end] : [-1, -1];
 };
