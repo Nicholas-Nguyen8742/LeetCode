@@ -7,5 +7,6 @@ var searchInsert = function(nums, target) {
     const found = nums.findIndex((element) => element === target);
     if (found !== -1) return found;
     const answer = nums.findIndex((el) => el > target);
-    return answer === -1 ? nums.length : answer;
+    if (answer !== -1) return answer;
+    return nums.length;
 };
