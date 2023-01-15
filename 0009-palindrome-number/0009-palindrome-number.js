@@ -4,8 +4,7 @@
  */
 var isPalindrome = function(x) {
     if (x < 0) return false;
-    const arr = `${x}`.split('');
-    const string = arr.toString();
-    const reverse = [...arr].reverse().toString();
-    return string === reverse ? true : false;
+    const arr = `${x}`.split('').toString();
+    const reverse = `${x}`.split('').reverse().toString();
+    return arr === reverse ? true : false;
 };
