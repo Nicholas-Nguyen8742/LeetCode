@@ -4,11 +4,7 @@
  * @return {number}
  */
 var searchInsert = function(nums, target) {
-    let found = nums.findIndex((element) => element === target);
-    if (found === (-1)) {
-        const answer = nums.findIndex((el) => el > target);
-        if (answer === (-1)) return nums.length;
-        return answer;
-    }
-    return found;
+    const found = nums.findIndex((element) => element === target);
+    const answer = nums.findIndex((el) => el > target);
+    return found === -1 ? (answer === -1 ? nums.length : answer) : found;
 };
