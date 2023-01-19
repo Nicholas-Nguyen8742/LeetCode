@@ -9,11 +9,9 @@ var findRelativeRanks = function(score) {
       2: "Bronze Medal"
     };
     let dup = [...score].sort((a, b) => b - a);
-    let results = [];
-    score.map((el) => {
+    return score.map((el) => {
       const found = dup.findIndex((element) => el === element);
-      if (map[found]) results.push(map[found]);
-      if (found > 2) results.push((found + 1).toString());
+      if (map[found]) return (map[found]);
+      if (found > 2) return ((found + 1).toString());
     });
-    return results;
 };
