@@ -5,15 +5,9 @@
  */
 var mostCommonWord = function(paragraph, banned) {
   const clean = paragraph.replace(/,/g, ' ').replace(/[&\/\\#;,!+()$~%.'":*?<>{}]/g, '').toLowerCase().split(' ');
-  const without = clean.filter((element) => element === ""
-                               ? element
-                               : !banned.includes(element));
+  const without = clean.filter((element) => element === "" ? element : !banned.includes(element));
   const map = without.reduce((acc, val) => {
-      if (acc.has(val)){
-         acc.set(val, acc.get(val) + 1);
-      } else {
-         acc.set(val, 1);
-      };
+      acc.has(val) ? acc.set(val, acc.get(val) + 1) : acc.set(val, 1);
       return acc;
    }, new Map);
    const frequencyArray = Array.from(map);
