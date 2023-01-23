@@ -5,7 +5,6 @@
  * @return {string}
  */
 var dayOfTheWeek = function(day, month, year) {
-    const value = (new Date(Date.UTC(year, month - 1, day))).toUTCString().split(" ")[0].slice(0, -1);
     const map = {
         "Sun": "Sunday",
         "Mon": "Monday",
@@ -16,5 +15,5 @@ var dayOfTheWeek = function(day, month, year) {
         "Sat": "Saturday"
     }
 
-    return map[value];
+    return map[(new Date(Date.UTC(year, month - 1, day))).toUTCString().split(" ")[0].slice(0, -1)];
 };
