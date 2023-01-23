@@ -4,8 +4,8 @@
  * @return {number}
  */
 var numJewelsInStones = function(jewels, stones) {
-    const jew = jewels.split("");
+    const jewel = jewels.split("");
     let count = 0;
-    stones.split("").map((el) => (jew.includes(el)) ? count += 1 : count = count);
+    stones.split("").map((el) => (jewel.includes(el)) ? count += 1 : count = count);
     return count;
 };
