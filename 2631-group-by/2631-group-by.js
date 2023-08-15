@@ -3,11 +3,12 @@
  * @return {Array}
  */
 Array.prototype.groupBy = function(fn) {
-    return this.reduce((map, item) => {
-        const key = fn(item);
-        key in map ? map[key].push(item) : map[key] = [item];
-        return map;
-    }, {});
+    let map = {};
+    this.forEach((el) => {
+        const key = fn(el);
+        key in map ? map[key].push(el) : map[key] = [el];
+    });
+    return map;
 };
 
 /**
