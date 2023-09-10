@@ -4,9 +4,8 @@
  */
 var compose = function(functions) {
 	return function(x) {
-        let result = x;
-        functions.reverse().forEach((fn) => result = fn.call(this, result));
-        return result;
+        functions.reverse().forEach((fn) => x = fn.call(this, x));
+        return x;
     }
 };
 
