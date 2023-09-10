@@ -4,5 +4,6 @@
  * @return {string}
  */
 var truncateSentence = function(s, k) {
-    return s.split(' ').filter((el, i) => i <= k - 1).join(' ');
+    const arr = s.split(' ').slice(0, k);
+    return arr.join(' ');
 };
