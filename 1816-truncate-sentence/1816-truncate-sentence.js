@@ -5,10 +5,9 @@
  */
 var truncateSentence = function(s, k) {
     let string = '';
-    s.split(' ').forEach((el, i) => {
-        if (i <= k - 1) {
-            i === 0 ? string = el : string += ` ${el}`;
-        }
-    });
-    return string;
+    const arr = s.split(' ');
+    for (let i = 0; i <= k; i++) {
+        if (i === k) return string;
+        i === 0 ? string = arr[i] : string += ` ${arr[i]}`;
+    }
 };
