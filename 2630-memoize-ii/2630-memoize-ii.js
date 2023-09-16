@@ -3,39 +3,34 @@
  */
 class Cache {
     constructor() {
-        this.trie = new Map();
-        this.key = Symbol();
+        this.values = new Map();
+        this.keys = new Map();
+        this.id = 0;
+    }
+
+    getCacheKey(args) {
+        return args.map(arg => {
+            if (!this.keys.has(arg)) {
+                this.keys.set(arg, this.id++);
+            }
+
+            return this.keys.get(arg);
+        }).join('_');
     }
 
     has(args) {
-        let current = this.trie;
-        for (const arg of args) {
-            if (!current.has(arg)) {
-                return false;
-            }
-            current = current.get(arg);
-        }
-        return current?.has(this.key);
+        const key = this.getCacheKey(args);
+        return this.values.has(key);
     }
 
     get(args) {
-        let current = this.trie;
-        for (const arg of args) {
-            current = current.get(arg);
-        }
-        return current.get(this.key);
-
+        const key = this.getCacheKey(args);
+        return this.values.get(key);
     }
 
     set(args, value) {
-        let current = this.trie;
-        for (const arg of args) {
-            if (!current.has(arg)) {
-                current.set(arg, new Map());
-            }
-            current = current.get(arg);
-        }
-        current.set(this.key, value);
+        const key = this.getCacheKey(args);
+        this.values.set(key, value);
     }
 }
 
