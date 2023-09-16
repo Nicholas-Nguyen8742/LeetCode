@@ -6,8 +6,7 @@ var maximumNumberOfStringPairs = function(words) {
     let pairs = 0;
     let arr = [];
     words.forEach((word) => {
-        let reversed = word.charAt(1) + word.charAt(0);
-        if (arr.includes(reversed)) {
+        if (arr.includes(word.charAt(1) + word.charAt(0))) {
             pairs += 1;
         } else {
             arr.push(word);
