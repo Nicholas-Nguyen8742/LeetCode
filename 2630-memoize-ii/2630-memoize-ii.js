@@ -1,44 +1,55 @@
 /**
  * @param {Function} fn
  */
-class TrieNode {
+class Cache {
     constructor() {
-      this.value = null;
-      this.children = new Map();
+        this.trie = new Map();
+        this.key = Symbol();
     }
 
-    getValue(args) {
-      return this.children.get(args)?.value;
-    }
-
-    setValue(args, value) {
-      const childNode = this.children.get(args) ?? new TrieNode();
-      childNode.value = value;
-      this.children.set(args, childNode);
-    }
-  }
-function memoize(fn) {
-  const cache = new TrieNode();
-    return function(...args) {
-        if (args.length === 0) {
-            if (cache.value !== null) {
-                return cache.value;
+    has(args) {
+        let current = this.trie;
+        for (const arg of args) {
+            if (!current.has(arg)) {
+                return false;
             }
-            const result = fn.apply(this, args);
-            cache.value = result;
-            return result;
+            current = current.get(arg);
         }
-        let currNode = cache;
-        args.forEach((arg) => {
-            const childNode = currNode.children.get(arg) ?? new TrieNode();
-            currNode.children.set(arg, childNode);
-            currNode = childNode;
-        });
-        if (currNode.value === null) {
-            const result = fn.apply(this, args);
-            currNode.value = result;
+        return current?.has(this.key);
+    }
+
+    get(args) {
+        let current = this.trie;
+        for (const arg of args) {
+            current = current.get(arg);
         }
-        return currNode.value;
+        return current.get(this.key);
+
+    }
+
+    set(args, value) {
+        let current = this.trie;
+        for (const arg of args) {
+            if (!current.has(arg)) {
+                current.set(arg, new Map());
+            }
+            current = current.get(arg);
+        }
+        current.set(this.key, value);
+    }
+}
+
+function memoize(fn) {
+  const cache = new Cache();
+    return function(...args) {
+        const argsWithThis = [this, ...args];
+        if (cache.has(argsWithThis)) {
+            return cache.get(argsWithThis);
+        }
+
+        const value = fn.apply(this, args);
+        cache.set(argsWithThis, value);
+        return value;
     }
 }
 
