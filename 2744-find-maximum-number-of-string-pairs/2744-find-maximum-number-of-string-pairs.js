@@ -9,8 +9,9 @@ var maximumNumberOfStringPairs = function(words) {
         let reversed = word.charAt(1) + word.charAt(0);
         if (arr.includes(reversed)) {
             pairs += 1;
+        } else {
+            arr.push(word);
         }
-        arr.push(word);
     });
     return pairs;
 };
