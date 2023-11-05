@@ -4,9 +4,12 @@
  * @return {number[][]}
  */
 
+var setToArr = function(set) {
+    return Array.from(set);
+}
+
 var filterArrayDiff = function(set1, set2) {
-    const nums1 = Array.from(set1);
-    return nums1.filter((el) => !set2.has(el));
+    return setToArr(set1).filter((el) => !set2.has(el));
 }
 
 var findDifference = function(nums1, nums2) {
