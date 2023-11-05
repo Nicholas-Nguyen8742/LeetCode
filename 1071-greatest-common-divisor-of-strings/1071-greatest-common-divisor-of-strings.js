@@ -12,7 +12,5 @@ var gcdOfStrings = function(str1, str2) {
         return "";
      }
 
-    const div = gcds(str1.length, str2.length);
-
-    return str1.slice(0, div);
+    return str1.slice(0, gcds(str1.length, str2.length));
 };
