@@ -10,7 +10,7 @@ var productExceptSelf = function(nums) {
     const copy = [];
     for (const element of nums) {
         const i = copy.length;
-        copy[i] = product(nums, i);
+        copy.push(product(nums, i));
     }
     return copy;
 };
