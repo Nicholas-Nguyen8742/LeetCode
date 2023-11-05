@@ -4,8 +4,10 @@
  */
 var productExceptSelf = function(nums) {
     const copy = [...nums];
-    return nums.reduce((acc, curr, index) => {
-        acc[index] = copy.reduce((acc2, curr2, i2) => i2 !== index ? (acc2 * curr2) : acc2, 1);
-        return acc;
-    }, nums);
+    let i = 0;
+    while (i < nums.length) {
+        nums[i] = copy.reduce((acc, curr, index) => index !== i ? acc * curr : acc, 1);
+        i++;
+    }
+    return nums;
 };
