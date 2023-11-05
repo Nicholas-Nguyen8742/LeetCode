@@ -14,8 +14,6 @@ var isArray = function(el) {
 var reverseVowels = function(s) {
     const arr = s.split('').map(isMatch);
     const filter = arr.filter(isArray).reverse();
-    for (let i = filter.length - 1, j = 0; i >= 0; i--, j++) {
-      arr[filter[j][1]] = filter[i][0];
-    }
-  return arr.join('');
+    for (let i = filter.length - 1, j = 0; i >= 0; i--, j++)  arr[filter[j][1]] = filter[i][0];
+    return arr.join('');
 };
