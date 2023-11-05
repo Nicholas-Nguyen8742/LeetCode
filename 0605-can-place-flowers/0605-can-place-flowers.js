@@ -20,11 +20,15 @@ var canPlaceFlowers = function(flowerbed, n) {
         flowerbed[lastElementIndex] = 1;
         result ++;
     }
-    for (let i = 1; i <= flowerbed.length; i++) {
-        if (flowerbed[i - 1] === 0 && flowerbed[i + 1] === 0 && flowerbed[i] !== 1) {
-            flowerbed[i] = 1;
-            result ++;
+    let i = 1;
+    while (i <= flowerbed.length) {
+        if (flowerbed[i - 1] === 0 && flowerbed[i + 1] === 0) {
+            if (flowerbed[i] !== 1) {   
+                flowerbed[i] = 1;
+                result ++;   
+            }
         }
+        i++;
     }
     return result >= n; 
 };
