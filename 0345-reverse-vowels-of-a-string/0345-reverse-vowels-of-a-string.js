@@ -22,11 +22,10 @@ var filterArrReverse = function(arr) {
 var reverseVowels = function(s) {
     const arr = stringToMatchArr(s);
     const filter = filterArrReverse(arr);
-    let i = filter.length - 1, j = 0;
-    while (i >= 0) {
-        arr[filter[j][1]] = filter[i][0];
-        i--;
-        j++;
-    }
+    let j = filter.length - 1;
+    filter.forEach((el) => {
+        arr[filter[j][1]] = el[0];
+        j--;
+    });
     return arr.join('');
 };
