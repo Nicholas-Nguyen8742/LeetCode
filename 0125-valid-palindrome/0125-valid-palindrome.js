@@ -12,5 +12,6 @@ var reverseString = function(string) {
 };
 
 var isPalindrome = function(s) {
-    return cleanString(s) === reverseString(cleanString(s));
+    const string = cleanString(s);
+    return string === reverseString(string);
 };
