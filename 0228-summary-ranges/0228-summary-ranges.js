@@ -10,7 +10,8 @@ var summaryRanges = function(nums) {
         const tempLength = temp.length;
         const curr = nums[i];
         if (tempLength && (temp[tempLength - 1] + 1 !== curr)) {
-            const val = tempLength === 1 ? `${temp[0]}` : `${temp[0]}->${temp[tempLength - 1]}`;
+            const tempFirstEl = temp[0];
+            const val = tempLength === 1 ? `${tempFirstEl}` : `${tempFirstEl}->${temp[tempLength - 1]}`;
             res.push(val);
             temp = [];
         }
