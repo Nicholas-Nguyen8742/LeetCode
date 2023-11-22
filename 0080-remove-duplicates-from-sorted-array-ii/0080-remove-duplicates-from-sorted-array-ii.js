@@ -3,9 +3,7 @@
  * @return {number}
  */
 var removeDuplicates = function(nums) {
-    let map = {};
-    let i = 0;
-    let length = nums.length;
+    let map = {}, i = 0, length = nums.length;
     while (i < length) {
         const curr = nums[i];
         if (!map[curr]) {
