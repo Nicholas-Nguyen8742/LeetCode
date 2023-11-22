@@ -7,12 +7,12 @@ var removeDuplicates = function(nums) {
     while (i < length) {
         const curr = nums[i];
         const currVal = map[curr] || 0;
-        if (!currVal || (map[curr] === 1)) {
-            map[curr] = currVal + 1;
-            i++;
-        } else {
+        if (currVal === 2) {
             nums.splice(i, 1);
             length = length - 1;
+        } else {
+            map[curr] = currVal + 1;
+            i++;
         }
     }
 };
