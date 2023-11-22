@@ -3,10 +3,12 @@
  * @return {number}
  */
 var removeDuplicates = function(nums) {
-    let map = {}, i = 0, length = nums.length;
+    let map = {};
+    let i = 0;
+    let length = nums.length;
     while (i < length) {
         const curr = nums[i];
-        if (map[curr] === 2) {
+        if (map[nums[i]] === 2) {
             nums.splice(i, 1);
             length = length - 1;
         } else {
