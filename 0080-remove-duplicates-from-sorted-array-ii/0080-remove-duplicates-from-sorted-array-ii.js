@@ -6,13 +6,11 @@ var removeDuplicates = function(nums) {
     let map = {}, i = 0, length = nums.length;
     while (i < length) {
         const curr = nums[i];
-        if (!map[curr]) {
-            map[curr] = 1;
+        const currVal = map[curr] || 0;
+        if (!currVal || (map[curr] === 1)) {
+            map[curr] = currVal + 1;
             i++;
-        } else if (map[curr] === 1) {
-            map[curr] = 2;
-            i++;
-        } else if (map[curr] === 2) {
+        } else {
             nums.splice(i, 1);
             length = length - 1;
         }
