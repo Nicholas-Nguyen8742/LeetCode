@@ -6,10 +6,12 @@
 var searchMatrix = function(matrix, target) {
     let row = 0;
     while (row < matrix.length) {
-        for (let col = 0; col < matrix[row].length; col++) {
+        let col = 0;
+        while (col < matrix[row].length) {
             if (matrix[row][col] === target) {
                 return true;
             }
+            col++;
         }
         row++;
     }
