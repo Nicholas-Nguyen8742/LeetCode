@@ -7,8 +7,7 @@ var summaryRanges = function(nums) {
     let i = 1;
     let temp = [nums[0]];
     while (i <= nums.length) {
-        if (temp.length && (temp[temp.length - 1] + 1 === nums[i])) {
-        } else {
+        if (temp.length && (temp[temp.length - 1] + 1 !== nums[i])) {
             const val = temp.length === 1 ? `${temp[0]}` : `${temp[0]}->${temp[temp.length - 1]}`;
             res.push(val);
             temp = [];
