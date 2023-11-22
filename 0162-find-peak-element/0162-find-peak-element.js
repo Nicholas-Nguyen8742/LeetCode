@@ -12,7 +12,8 @@ var isMatch = function(el, i, nums) {
 };
 
 var notMatch = function(nums) {
-    return nums[0] >= nums[nums.length - 1] ? 0 : nums.length - 1;
+    const length = nums.length
+    return nums[0] >= nums[length - 1] ? 0 : length - 1;
 };
 
 var findPeakElement = function(nums) {
