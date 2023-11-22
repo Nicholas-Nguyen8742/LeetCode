@@ -14,7 +14,7 @@ var removeDuplicates = function(nums) {
         } else if (map[curr] === 1) {
             map[curr] = 2;
             i++;
-        } else if (map[nums[i]] === 2) {
+        } else if (map[curr] === 2) {
             nums.splice(i, 1);
             length = length - 1;
         }
