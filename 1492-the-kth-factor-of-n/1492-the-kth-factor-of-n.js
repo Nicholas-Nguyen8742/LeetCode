@@ -11,7 +11,7 @@ var kthFactor = function(n, k) {
     }
 
     if (n % i === 0) {
-      if ([...arr, i].length === k) {
+      if (arr.length === k - 1) {
           return i;
       }
       arr.push(i);
