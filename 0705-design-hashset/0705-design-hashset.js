@@ -2,39 +2,24 @@
 var MyHashSet = function() {
   return Object.create(null, {
     size: {
-      value: 9137,
+      value: 1000000,
     },
     arr: {
       value: new Array(this.size),
     },
     add: {
       value: function(key) {
-        const index = key % this.size;
-        if (!this.arr[index]) {
-          this.arr[index] = [key]
-        } else {
-          if (!this.arr[index].includes(key)) {
-            this.arr[index].push(key)
-          }
-        }
+        this.arr[key] = key;
       },
     },
     remove: {
       value: function(key) {
-        const index = key % this.size;
-        if (this.arr[index] && this.arr[index].includes(key)) {
-          const found = this.arr[index].findIndex((item) => item === key);
-          if (found !== -1) {
-            this.arr[index].splice(found, 1);
-          }
-        }
-        
+        this.arr[key] = undefined;
       },
     },
     contains: {
       value: function(key) {
-        const index = key % this.size;
-        return !!(this.arr[index] && this.arr[index].includes(key));
+        return this.arr[key] != null;
       },
     },
   });
