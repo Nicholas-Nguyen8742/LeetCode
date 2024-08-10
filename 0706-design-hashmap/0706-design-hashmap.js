@@ -1,15 +1,23 @@
 
 var MyHashMap = function() {
-  return Object.create({
-    map: {},
-    put: function(key, value) {
-      this.map[key] = value
+  return Object.create(null, {
+    map: {
+      value: {}
     },
-    get: function(key) {
-      return this.map[key] == null ? -1 : this.map[key]
+    put: {
+      value: function(key, value) {
+        this.map[key] = value
+      },
     },
-    remove: function(key) {
-      delete this.map[key]
+    get: {
+      value: function(key) {
+        return this.map[key] == null ? -1 : this.map[key]
+      },
+    },
+    remove: {
+      value: function(key) {
+        delete this.map[key]
+      },
     },
   })
 };
