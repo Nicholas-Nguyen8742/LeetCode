@@ -1,47 +1,31 @@
 
 var MyHashSet = function() {
-  return Object.create(null, {
-    add: {
-      value: function(key) {
-        this[key] = key;
-      },
-    },
-    remove: {
-      value: function(key) {
-        delete this[key];
-      },
-    },
-    contains: {
-      value: function(key) {
-        return key in this;
-      },
-    },
-  });
+  this.hash = Object.create(null);
 };
 
-// /** 
-//  * @param {number} key
-//  * @return {void}
-//  */
-// MyHashSet.prototype.add = function(key) {
-    
-// };
+/** 
+ * @param {number} key
+ * @return {void}
+ */
+MyHashSet.prototype.add = function(key) {
+    this.hash[key] = key;
+};
 
-// /** 
-//  * @param {number} key
-//  * @return {void}
-//  */
-// MyHashSet.prototype.remove = function(key) {
-    
-// };
+/** 
+ * @param {number} key
+ * @return {void}
+ */
+MyHashSet.prototype.remove = function(key) {
+    delete this.hash[key];
+};
 
-// /** 
-//  * @param {number} key
-//  * @return {boolean}
-//  */
-// MyHashSet.prototype.contains = function(key) {
-    
-// };
+/** 
+ * @param {number} key
+ * @return {boolean}
+ */
+MyHashSet.prototype.contains = function(key) {
+    return key in this.hash;
+};
 
 /** 
  * Your MyHashSet object will be instantiated and called as such:
