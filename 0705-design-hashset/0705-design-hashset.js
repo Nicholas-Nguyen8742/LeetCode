@@ -1,28 +1,19 @@
 
 var MyHashSet = function() {
   return Object.create(null, {
-    set: {
-      value: new Array(),
-    },
     add: {
       value: function(key) {
-        if (this.contains(key)) {
-          return;
-        }
-        this.set.push(key)
+        this[key] = key;
       },
     },
     remove: {
       value: function(key) {
-        const found = this.set.findIndex((element) => element === key);
-        if (found !== -1) {
-          this.set.splice(found, 1);
-        }
+        delete this[key];
       },
     },
     contains: {
       value: function(key) {
-        return this.set.includes(key);
+        return key in this;
       },
     },
   });
