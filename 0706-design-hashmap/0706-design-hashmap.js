@@ -1,34 +1,43 @@
-class MyHashMap {
-  constructor() {
-    this.map = Object.create(null);
-  }
 
-/** 
- * @param {number} key 
- * @param {number} value
- * @return {void}
- */
-  put(key, value) {
-    this.map[key] = value;
-  }
+var MyHashMap = function() {
+  return Object.create({
+    map: {},
+    put: function(key, value) {
+      this.map[key] = value
+    },
+    get: function(key) {
+      return this.map[key] == null ? -1 : this.map[key]
+    },
+    remove: function(key) {
+      delete this.map[key]
+    },
+  })
+};
 
-/** 
- * @param {number} key
- * @return {number}
- */
-  get(key) {
-    return this.map[key] == null ? -1 : this.map[key];
-  }
+// /** 
+//  * @param {number} key 
+//  * @param {number} value
+//  * @return {void}
+//  */
+// MyHashMap.prototype.put = function(key, value) {
+//   this.map[key] = value;
+// };
 
-/** 
- * @param {number} key
- * @return {number}
- */
-  remove(key) {
-    delete this.map[key];
-  }
-}
+// /** 
+//  * @param {number} key
+//  * @return {number}
+//  */
+// MyHashMap.prototype.get = function(key) {
+//   return this.map[key] == null ? -1 : this.map[key];
+// };
 
+// /** 
+//  * @param {number} key
+//  * @return {void}
+//  */
+// MyHashMap.prototype.remove = function(key) {
+//   delete this.map[key];
+// };
 
 /** 
  * Your MyHashMap object will be instantiated and called as such:
