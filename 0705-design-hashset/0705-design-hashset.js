@@ -1,8 +1,11 @@
 
 var MyHashSet = function() {
   return Object.create(null, {
+    size: {
+      value: 1000000,
+    },
     arr: {
-      value: new Array(1000000),
+      value: new Array(this.size),
     },
     add: {
       value: function(key) {
