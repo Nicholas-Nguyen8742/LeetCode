@@ -3,9 +3,8 @@
  * @return {number}
  */
 var findMiddleIndex = function(nums) {
-  const totalSum = nums.reduce((a, b) => a + b, 0);
   let leftSum = 0;
-  let rightSum = totalSum;
+  let rightSum = nums.reduce((a, b) => a + b, 0);
 
   for (let i = 0; i < nums.length; i++) {
     rightSum -= nums[i];
