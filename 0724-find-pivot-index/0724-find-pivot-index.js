@@ -8,20 +8,17 @@ var addSum = function(arr) {
 }
 
 var pivotIndex = function(nums) {
-  let left = -1;
-  const leftArr = [];
+  let leftSum = 0;
+  let rightSum = addSum(nums);
   
   for (let i = 0; i < nums.length; i++) {
-    const rightArr = nums.slice(i);
-    rightArr.shift();
-    let leftSum = addSum(leftArr);
-    let rightSum = addSum(rightArr);
-    if (leftSum === rightSum) {
+    if (leftSum === rightSum - nums[i]) {
       return i;
     }
-
-    leftArr.push(nums[i]);
+ 
+    leftSum += nums[i];
+    rightSum -= nums[i];
   }
   
-  return left;
+  return -1;
 };
