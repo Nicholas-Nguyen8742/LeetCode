@@ -22,22 +22,6 @@ var pivotIndex = function(nums) {
 
     leftArr.push(nums[i]);
   }
-//   let i = 0;
-  
-//   while (i < nums.length) {
-//     const rightArr = nums.slice(i);
-//     rightArr.shift();
-//     let leftSum = addSum(leftArr);
-//     let rightSum = addSum(rightArr);
-//     if (leftSum === rightSum) {
-//       left = i;
-//       break;
-//     }
-
-//     leftArr.push(nums[i]);
-//     i++;
-//   }
-  
   
   return left;
 };
