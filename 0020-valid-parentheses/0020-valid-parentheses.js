@@ -9,8 +9,7 @@ var isValid = function(s, unmatched = '') {
     "[": "]"
   };
   
-  let i = 0;
-  while (i < s.length) {
+  for (let i = 0; i < s.length; i++) {
     const unmatchedElIndex = unmatched.length - 1;
     const unmatchedEl = unmatched[unmatchedElIndex];
     if (unmatchedEl in hash && s[i] === hash[unmatchedEl]) {
@@ -18,7 +17,6 @@ var isValid = function(s, unmatched = '') {
     } else {
       unmatched += s[i];
     }
-    i++;
   }
 
   return !unmatched.length;
