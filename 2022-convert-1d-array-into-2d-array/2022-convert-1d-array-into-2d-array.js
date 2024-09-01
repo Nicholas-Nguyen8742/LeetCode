@@ -14,17 +14,15 @@ var construct2DArray = function(original, m, n) {
   let columnIndex = 0;
 
   for (let i = 0; i < original.length; i++) {
-    if (currArray[rowIndex] === undefined) {
-      currArray.push([]);   
-    }
-
-    currArray[rowIndex].push(original[i]);
-    
-    columnIndex++;
+    currArray[rowIndex] === undefined
+      ? currArray.push([original[i]])
+      : currArray[rowIndex].push(original[i]);
 
     if (currArray[rowIndex].length === n) {
       columnIndex = 0;
       rowIndex++;
+    } else {
+      columnIndex++;
     }
   }
 
