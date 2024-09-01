@@ -9,7 +9,7 @@ var construct2DArray = function(original, m, n) {
     return [];
   }
 
-  let currArray = Array.from(Array(m), () => new Array(n).fill(undefined));
+  let currArray = Array.from(Array(m), () => new Array(n));
   let rowIndex = 0;
   let columnIndex = 0;
 
