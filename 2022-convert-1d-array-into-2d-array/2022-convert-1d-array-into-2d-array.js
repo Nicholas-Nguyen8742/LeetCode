@@ -9,16 +9,19 @@ var construct2DArray = function(original, m, n) {
     return [];
   }
 
-  let currArray = Array.from(Array(m), () => new Array(n));
+  let currArray = [[]];
   let rowIndex = 0;
   let columnIndex = 0;
 
   for (let i = 0; i < original.length; i++) {
-    currArray[rowIndex][columnIndex] = original[i];
+    if (currArray[rowIndex] == null) {
+      currArray.push([]);   
+    }
+    currArray[rowIndex].push(original[i]);
     
     columnIndex++;
 
-    if (!(currArray[rowIndex].includes(undefined))) {
+    if (currArray[rowIndex].length === n) {
       columnIndex = 0;
       rowIndex++;
     }
