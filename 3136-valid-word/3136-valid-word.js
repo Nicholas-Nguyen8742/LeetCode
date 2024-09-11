@@ -2,11 +2,6 @@
  * @param {string} word
  * @return {boolean}
  */
-
-var everyTrue = function(arr) {
-  return arr.every((el) => el === true);
-}
-
 var isValid = function(word) {
   if (word.length < 3) {
     return false;
