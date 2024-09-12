@@ -4,14 +4,13 @@
  * @return {boolean}
  */
 var canConstruct = function(ransomNote, magazine) {
-  const ransomeArray = ransomNote.split('');
+  const ransomArr = ransomNote.split('');
   for (let i = 0; i < magazine.length; i++) {
-    const char = magazine[i];
-    if (ransomeArray.includes(char)) {
-      const found = ransomeArray.findIndex((el) => el === char);
-      ransomeArray.splice(found, 1);
+    const foundIndex = ransomArr.findIndex((el) => el === magazine[i]);
+    if (foundIndex >= 0) {
+      ransomArr.splice(foundIndex, 1);
     }
   }
   
-  return ransomeArray.length === 0;
+  return ransomArr.length === 0;
 };
