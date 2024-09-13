@@ -12,6 +12,9 @@ var findWords = function(words) {
   return words.reduce((acc, curr, i) => {
     let rowCount = 0;
     for (const key in map) {
+      if (rowCount === 2) {
+        break;
+      }
       const arr = curr.toLowerCase().split('').map((el) => map[key].includes(el));
       if (arr.every((el) => el === true)) {
         rowCount += 1;
