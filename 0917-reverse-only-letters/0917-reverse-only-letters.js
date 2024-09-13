@@ -12,7 +12,6 @@ var reverseOnlyLetters = function(s) {
     } else {
       acc.push(curr);
     }
-    
     if (s.length - 1 === i) {
       const reversed = letters.reverse();
       return acc.map((el) => {
