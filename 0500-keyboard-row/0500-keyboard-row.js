@@ -13,7 +13,7 @@ var findWords = function(words) {
     let rowCount = 0;
     for (const key in map) {
       if (rowCount === 2) {
-        break;
+        continue;
       }
       const arr = curr.toLowerCase().split('').map((el) => map[key].includes(el));
       if (arr.every((el) => el === true)) {
