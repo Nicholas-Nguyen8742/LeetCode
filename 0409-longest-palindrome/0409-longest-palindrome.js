@@ -3,17 +3,17 @@
  * @return {number}
  */
 var longestPalindrome = function(s) {
-  const set = new Set();
+  const set = Object.create(null);
   let count = 0;
 
   for (const char of s) {
-    if (set.has(char)) {
+    if (char in set) {
 			count += 2;
-      set.delete(char);
+      delete set[char];
     } else {
-      set.add(char);
+      set[char] = char;
     }
   }
 
-  return set.size > 0 ? count + 1 : count;
+  return Object.keys(set).length > 0 ? count + 1 : count;
 };
