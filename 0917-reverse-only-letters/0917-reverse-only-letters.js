@@ -14,5 +14,5 @@ var reverseOnlyLetters = function(s) {
       result.push(curr);
     }
   });
-  return result.map((el, i) => el === null ? letters.splice(0, 1)[0] : el).join('');
+  return result.map((el, i) => el == null ? letters.splice(0, 1)[0] : el).join('');
 };
