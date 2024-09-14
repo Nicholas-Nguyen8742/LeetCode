@@ -1,6 +1,5 @@
 
 var RecentCounter = function() {
-  this.stack = [null];
   this.requests = [];
 };
 
@@ -30,8 +29,6 @@ RecentCounter.prototype.ping = function(t) {
   if (count < requestTotal) {
     this.requests.splice(0, (requestTotal - count));
   }
-
-  this.stack.push(count);
 
   return count;
 };
