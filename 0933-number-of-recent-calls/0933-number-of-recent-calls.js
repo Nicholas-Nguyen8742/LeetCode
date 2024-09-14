@@ -13,15 +13,15 @@ RecentCounter.prototype.ping = function(t) {
    */
   this.requests.push(t);
   
-  const minInclusive = t - 3000; // Low - Min
-  const maxInclusive = t; // High - Max
+  const min = t - 3000; // Low - Min
+  const max = t; // High - Max
   
   const requestTotal = this.requests.length;
   
   let count = 0;
   for (let i = 0; i < requestTotal; i++) {
-    const currentRequest = this.requests[i];
-    if (minInclusive <= currentRequest && currentRequest <= maxInclusive) {
+    const args = [min, this.requests[i], max];
+    if (Math.min(...args) === min && Math.max(...args) === max) {
       count += 1;
     }
   }
