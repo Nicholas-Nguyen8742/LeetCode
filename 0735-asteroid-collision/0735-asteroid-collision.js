@@ -23,11 +23,3 @@ var asteroidCollision = function(asteroids) {
 
   return stack;
 };
-
-var isSameDirection = function(a, b) {
-  return (a >= 0 && b >= 0) || (a < 0 && b < 0);
-}
-
-var findSurvivor = function(a, b) {
-  return Math.max(Math.abs(a), Math.abs(b));
-}
