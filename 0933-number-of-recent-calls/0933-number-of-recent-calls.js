@@ -12,16 +12,14 @@ RecentCounter.prototype.ping = function(t) {
    * Needed to check if in range of future pings 
    */
   this.requests.push(t);
-  
-  const min = t - 3000; // Low - Min
-  const max = t; // High - Max
-  
+
   const requestTotal = this.requests.length;
+  const args = [t - 3000, null, t];
   
   let count = 0;
   for (let i = 0; i < requestTotal; i++) {
-    const args = [min, this.requests[i], max];
-    if (Math.min(...args) === min && Math.max(...args) === max) {
+    args[1] = this.requests[i];
+    if (Math.min(...args) === args[0] && Math.max(...args) === args[2]) {
       count += 1;
     }
   }
