@@ -10,15 +10,12 @@ class Solution(object):
           fizzCondition = i % 3 == 0
           buzzCondition = i % 5 == 0
           
-          if fizzCondition or buzzCondition:
-              listItem = ""
-              if fizzCondition: 
-                  listItem = "Fizz"
-
-              if buzzCondition:
-                  listItem = listItem + "Buzz"
-
-              list.append(listItem)              
+          if fizzCondition and buzzCondition:
+              list.append("FizzBuzz")
+          elif fizzCondition:
+              list.append("Fizz")
+          elif buzzCondition:
+              list.append("Buzz")
           else: 
               list.append(str(i))
 
