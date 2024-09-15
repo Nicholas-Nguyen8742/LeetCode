@@ -5,8 +5,10 @@ class Solution(object):
         :rtype: List[str]
         """
         list = []
+        
+        i = 1
 
-        for i in range(1, n + 1):
+        while i < n + 1:
           fizzCondition = i % 3 == 0
           buzzCondition = i % 5 == 0
           
@@ -18,5 +20,7 @@ class Solution(object):
               list.append("Buzz")
           else: 
               list.append("Fizz")
+              
+          i += 1
 
         return list
