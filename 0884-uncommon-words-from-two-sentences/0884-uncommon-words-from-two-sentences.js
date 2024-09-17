@@ -17,7 +17,7 @@ var uncommonFromSentences = function(s1, s2) {
       set.add(word1);
       continue;
     }
-    
+
     const iterations = [word1, word2];
     iterations.forEach((word) => {
       if (typeof word === 'string') {
