@@ -11,14 +11,12 @@ var uncommonFromSentences = function(s1, s2) {
   const set = new Set();
 
   for (let i = 0; i < largerLength; i++) {
-    const word1 = first[i];
-    const word2 = second[i];
-    if (word1 === word2) {
-      set.add(word1);
+    const iterations = [first[i], second[i]];
+    if (iterations[0] === iterations[1]) {
+      set.add(iterations[0]);
       continue;
     }
 
-    const iterations = [word1, word2];
     iterations.forEach((word) => {
       if (typeof word === 'string') {
         const firstMatchedSelf = first.includes(word, i + 1);
@@ -29,8 +27,8 @@ var uncommonFromSentences = function(s1, s2) {
       }
     })
 
-    set.add(word1);
-    set.add(word2);
+    set.add(iterations[0]);
+    set.add(iterations[1]);
   }
 
   return result;
