@@ -16,22 +16,17 @@ var uncommonFromSentences = function(s1, s2) {
       continue;
     }
     
-    if (typeof first[i] === 'string') {
-      const firstMatchedSelf = first.includes(first[i], i + 1);
-      const secondMatchedOther = second.includes(first[i], i + 1);
-      if (!set.has(first[i]) && !firstMatchedSelf && !secondMatchedOther) {
-        result.push(first[i]);
+    const iterations = [first[i], second[i]];
+    iterations.forEach((word) => {
+      if (typeof word === 'string') {
+        const firstMatchedSelf = first.includes(word, i + 1);
+        const secondMatchedOther = second.includes(word, i + 1);
+        if (!set.has(word) && !firstMatchedSelf && !secondMatchedOther) {
+          result.push(word);
+        }
       }
-    }
+    })
 
-    if (typeof second[i] === 'string') {
-      const secondMatchedSelf = second.includes(second[i], i + 1);
-      const firstMatchedOther = first.includes(second[i], i + 1);
-      if (!set.has(second[i]) && !secondMatchedSelf && !firstMatchedOther) {
-        result.push(second[i]);
-      }
-    }
-    
     set.add(first[i]);
     set.add(second[i]);
   }
@@ -41,4 +36,4 @@ var uncommonFromSentences = function(s1, s2) {
 
 var splitStringToArr = function(str) {
   return str.split(' ');
-}
+};
