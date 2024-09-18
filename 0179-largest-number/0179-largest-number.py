@@ -1,6 +1,6 @@
 class Solution:
     def largestNumber(self, nums: List[int]) -> str:
-      strings_list = [str(num) for num in nums]
+      strings_list = list(map(str, nums))
       
       strings_list.sort(key=lambda a: a * 10, reverse=True)
       
