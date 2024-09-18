@@ -3,7 +3,7 @@
  * @return {string}
  */
 var largestNumber = function(nums) {
-  const arrString = nums.map((num) => num.toString()).sort((a, b) => (b + a) - (a + b));
+  const arrString = nums.map(String).sort((a, b) => (b + a) - (a + b));
   if (arrString[0] === '0') {
     return '0';
   }
