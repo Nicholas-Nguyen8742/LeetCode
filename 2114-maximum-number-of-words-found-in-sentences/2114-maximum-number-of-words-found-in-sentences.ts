@@ -3,6 +3,5 @@ function mostWordsFound(sentences: string[]): number {
 };
 
 function handleWordCount(s: string): number {
-  const arr = s.trim().split(' ');
-  return arr.length;
+  return s.trim().split(' ').length;
 }
