@@ -1,6 +1,5 @@
 function mostWordsFound(sentences: string[]): number {
-  const arrayOfCounts = sentences.map(handleWordCount);
-  return Math.max(...arrayOfCounts);
+  return Math.max(...(sentences.map(handleWordCount)));
 };
 
 function handleWordCount(s: string): number {
