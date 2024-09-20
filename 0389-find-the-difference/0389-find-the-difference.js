@@ -4,13 +4,11 @@
  * @return {character}
  */
 var findTheDifference = function(s, t) {
-  let i = 0;
-  while (i < t.length) {
+    for (let i = 0; i < t.length; i++) {
     if (s.includes(t[i])) {
       s = s.replace(t[i], '');
     } else {
       return t[i];
     }
-    i++;
   }
 };
