@@ -3,7 +3,7 @@ class Solution:
         """
         Do not return anything, modify s in-place instead.
         """
-        copy = list(s)
+        copy = s[:]
         i = 0
         while i < len(s):
             s[i] = copy[len(s) - i - 1]
