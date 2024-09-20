@@ -1,9 +1,11 @@
 function findTheDifference(s: string, t: string): string {
-  for (let i = 0; i < t.length; i++) {
+  let i = 0;
+  while (i < t.length) {
     if (!s.includes(t[i])) {
       return t[i];
     } else {
       s = s.replace(t[i], '');
     }
+    i++;
   }
 };
