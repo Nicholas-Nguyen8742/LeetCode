@@ -1,7 +1,10 @@
 func reverseString(s []byte)  {
-  var copyS []byte = make([]byte, len(s))
+  var lenS int = len(s)
+  var copyS []byte = make([]byte, lenS)
+
   copy(copyS, s)
-  for i := 0; i < len(s); i++ {
-    s[i] = copyS[len(copyS) - i - 1]
+
+  for i := 0; i < lenS; i++ {
+    s[i] = copyS[lenS - i - 1]
   }
 }
