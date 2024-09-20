@@ -5,6 +5,7 @@ func reverseString(s []byte)  {
   copy(copyS, s)
 
   for i := 0; i < lenS; i++ {
-    s[i] = copyS[lenS - i - 1]
+    var counter int = lenS - i - 1
+    s[i] = copyS[counter]
   }
 }
