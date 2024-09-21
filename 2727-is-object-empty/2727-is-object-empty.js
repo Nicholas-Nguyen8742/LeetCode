@@ -3,9 +3,5 @@
  * @return {boolean}
  */
 var isEmpty = function(obj) {
-  if (Array.isArray(obj)) {
-    return obj.length === 0;
-  }
-
-  return Object.keys(obj).length === 0;
+  return Array.isArray(obj) ? obj.length === 0 : Object.keys(obj).length === 0;
 };
