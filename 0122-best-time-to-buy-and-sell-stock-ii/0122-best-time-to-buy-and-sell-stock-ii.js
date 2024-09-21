@@ -3,16 +3,14 @@
  * @return {number}
  */
 var maxProfit = function(prices) {
-  let curr = -Infinity;
-  let profit = 0;
-  let i = 0;
-  while (i < prices.length) {
-    const prev = curr;
-    const prevProfit = profit;
-    curr = Math.max(prev, prevProfit - prices[i]);
-    profit = Math.max(prevProfit, prev + prices[i]);
-    i++;
-  }
-
-  return profit;
+  return prices.reduce((acc, price, i) => {
+    const [prev, prevProfit] = [acc[0], acc[1]];
+    acc[0] = Math.max(prev, prevProfit - price);
+    acc[1] = Math.max(prevProfit, prev + price);
+    
+    if (i === prices.length - 1) {
+      return acc[1];
+    }
+    return acc;
+  }, [-Infinity, 0]);
 };
