@@ -31,13 +31,7 @@ var myAtoi = function(s) {
   }
   
   function getResult(result) {
-    if (-Math.pow(2, 31) > result) {
-      return -Math.pow(2, 31);
-    } else if (result > (Math.pow(2, 31)) - 1) {
-      return Math.pow(2, 31) - 1;
-    } else {
-      return result;
-    }
+    return Math.max(Math.min(result, Math.pow(2, 31) - 1), -Math.pow(2, 31))
   }
   
   for (let i = index; i < cleanString.length; i++) {
