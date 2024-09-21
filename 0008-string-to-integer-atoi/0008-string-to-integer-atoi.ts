@@ -24,7 +24,7 @@ function myAtoi(s: string): number {
 
   for (let i = index; i < cleanString.length; i++) {
     if (["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"].includes(cleanString[i])) {
-      result =  result + cleanString[i];
+      result += cleanString[i];
     } else {
       if (result === "") {
         return 0;
