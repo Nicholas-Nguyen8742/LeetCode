@@ -1,13 +1,9 @@
 function maxProfit(prices: number[]): number {
-  let curr = -Infinity;
-  let profit = 0;
-  let i = 0;
-  while (i < prices.length) {
-    const prev = curr;
-    const prevProfit = profit;
+  let [curr, profit] = [-Infinity, 0];
+  for (let i = 0; i < prices.length; i++) {
+    const [prev, prevProfit] = [curr, profit];
     curr = Math.max(prev, prevProfit - prices[i]);
-    profit = Math.max(prevProfit, prev + prices[i]);
-    i++;
+    profit = Math.max(prevProfit, prev + prices[i])
   }
 
   return profit;
