@@ -22,9 +22,7 @@ function myAtoi(s: string): number {
 
   let result = "";
 
-  function getResult(result) {
-    return Math.max(Math.min(result, Math.pow(2, 31) - 1), -Math.pow(2, 31))
-  }
+  const getResult = (result) => Math.max(Math.min(result, Math.pow(2, 31) - 1), -Math.pow(2, 31));
   
   for (let i = index; i < cleanString.length; i++) {
     if (["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"].includes(cleanString[i])) {
