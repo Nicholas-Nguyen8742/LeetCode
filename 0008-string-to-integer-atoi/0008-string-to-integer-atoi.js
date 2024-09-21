@@ -25,17 +25,13 @@ var myAtoi = function(s) {
   }
 
   let result = "";
-  
-  function isDigit(char) {
-    return ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"].includes(char);
-  }
-  
+
   function getResult(result) {
     return Math.max(Math.min(result, Math.pow(2, 31) - 1), -Math.pow(2, 31))
   }
   
   for (let i = index; i < cleanString.length; i++) {
-    if (isDigit(cleanString[i])) {
+    if (["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"].includes(cleanString[i])) {
       result =  result + cleanString[i];
     } else {
       if (result === "") {
