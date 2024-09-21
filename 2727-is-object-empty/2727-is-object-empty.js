@@ -10,7 +10,7 @@ var isEmpty = function(obj) {
   let isObject = true;
   for (const key in obj) {
     if (key != null) {
-      isObject = false;
+      return false;
     }
   }
   return isObject;
