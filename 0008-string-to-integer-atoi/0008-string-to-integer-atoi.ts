@@ -22,8 +22,6 @@ function myAtoi(s: string): number {
 
   let result = "";
 
-  const getResult = (result) => Math.max(Math.min(result, Math.pow(2, 31) - 1), -Math.pow(2, 31));
-  
   for (let i = index; i < cleanString.length; i++) {
     if (["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"].includes(cleanString[i])) {
       result =  result + cleanString[i];
@@ -31,10 +29,10 @@ function myAtoi(s: string): number {
       if (result === "") {
         return 0;
       }
-      return getResult(parseInt(prefix + result, 10));
+      return Math.max(Math.min(parseInt(prefix + result, 10), Math.pow(2, 31) - 1), -Math.pow(2, 31));
     }
   }
 
   // Return if no other conditions met
-  return getResult(parseInt(prefix + result, 10));
+  return Math.max(Math.min(parseInt(prefix + result, 10), Math.pow(2, 31) - 1), -Math.pow(2, 31));
 };
