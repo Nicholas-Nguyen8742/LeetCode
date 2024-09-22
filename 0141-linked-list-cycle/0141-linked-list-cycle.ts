@@ -19,6 +19,6 @@ function hasCycle(head: ListNode | null): boolean {
       return true;
     }
   }
-  
+
   return false;
 };
