@@ -11,8 +11,7 @@
  * @return {ListNode}
  */
 var removeElements = function(head, val) {
-  let temp = new ListNode(0);
-  temp.next = head;
+  let temp = new ListNode(0, head);
   let curr = temp;
   
   while (curr.next != null) {
