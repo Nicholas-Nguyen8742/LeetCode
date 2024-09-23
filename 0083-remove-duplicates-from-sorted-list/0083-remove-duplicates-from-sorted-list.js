@@ -16,11 +16,7 @@ var deleteDuplicates = function(head) {
   }
 
   while (temp.next !== null) {
-    if (temp.val == temp.next.val) {
-      temp.next = temp.next.next;
-    } else {
-      temp = temp.next;
-    }
+    temp.val == temp.next.val ? temp.next = temp.next.next : temp = temp.next;
   }
 
   return head;
