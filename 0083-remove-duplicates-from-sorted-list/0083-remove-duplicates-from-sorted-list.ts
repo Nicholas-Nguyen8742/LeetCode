@@ -11,7 +11,7 @@
  */
 function deleteDuplicates(head: ListNode | null): ListNode | null {
   let temp = head;
-  if (!isNotNull(temp) || !isNotNull(temp.next)) {
+  if (!temp || !temp.next) {
     return head;
   }
 
