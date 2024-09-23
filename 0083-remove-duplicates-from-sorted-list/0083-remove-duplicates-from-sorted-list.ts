@@ -11,13 +11,17 @@
  */
 function deleteDuplicates(head: ListNode | null): ListNode | null {
   let temp = head;
-  if (!temp || temp.next == null) {
+  if (!isNotNull(temp) || !isNotNull(temp.next)) {
     return head;
   }
 
-  while (temp.next !== null) {
+  while (isNotNull(temp.next)) {
     temp.val == temp.next.val ? temp.next = temp.next.next : temp = temp.next;
   }
 
   return head;
+};
+
+function isNotNull(v: any): boolean {
+  return v != null;
 };
