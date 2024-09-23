@@ -15,13 +15,9 @@ function deleteDuplicates(head: ListNode | null): ListNode | null {
     return head;
   }
 
-  while (isNotNull(temp.next)) {
+  while (temp.next) {
     temp.val == temp.next.val ? temp.next = temp.next.next : temp = temp.next;
   }
 
   return head;
-};
-
-function isNotNull(v: any): boolean {
-  return v != null;
 };
