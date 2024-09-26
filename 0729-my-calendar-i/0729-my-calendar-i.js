@@ -1,6 +1,7 @@
 
 var MyCalendar = function() {
-  this.bookings = [];
+  this.starts = [];
+  this.ends = [];
 };
 
 /** 
@@ -9,20 +10,20 @@ var MyCalendar = function() {
  * @return {boolean}
  */
 MyCalendar.prototype.book = function(start, end) {
-  for (let i = 0; i < this.bookings.length; i++) {
-    const [s, e] = this.bookings[i];
-    if (!this.bookings[i]) {
+  for (let i = 0; i < this.starts.length; i++) {
+    if (this.starts[i] == null || this.ends[i] == null) {
       break;
     }
-    
-    if (s < end && start < e) {
+
+    if (this.starts[i] < end && start < this.ends[i]) {
       return false;
     }
   }
 
-  this.bookings.push([start, end]);
+  this.starts.push(start);
+  this.ends.push(end);
   return true;
-};
+}
 
 /** 
  * Your MyCalendar object will be instantiated and called as such:
