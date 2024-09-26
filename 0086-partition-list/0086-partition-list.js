@@ -13,21 +13,21 @@
 var partition = function(head, x) {
   let before = new ListNode(0);
   let after = new ListNode(0);
-  let beforeCurr = before;
-  let afterCurr = after;
+  let beforeNode = before;
+  let afterNode = after;
   
   while (head != null) {
     if (head.val < x) {
-      beforeCurr.next = head;
-      beforeCurr = beforeCurr.next;
+      beforeNode.next = head;
+      beforeNode = beforeNode.next;
     } else {
-      afterCurr.next = head;
-      afterCurr = afterCurr.next;
+      afterNode.next = head;
+      afterNode = afterNode.next;
     }
     head = head.next;
   }
   
-  afterCurr.next = null;
-  beforeCurr.next = after.next;
+  afterNode.next = null;
+  beforeNode.next = after.next;
   return before.next;
 };
