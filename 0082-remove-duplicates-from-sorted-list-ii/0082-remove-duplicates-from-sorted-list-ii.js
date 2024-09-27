@@ -11,13 +11,14 @@
  */
 var deleteDuplicates = function(head) {
   let temp = head;
+  if (!temp || temp.next == null) {
+    return head;
+  }
+
   let before = new ListNode(0);
   let dummyHead = before;
 
   const map = new Map();
-  if (!temp || temp.next == null) {
-    return head;
-  }
 
   while (temp) {
     if (map.has(temp.val)) {
