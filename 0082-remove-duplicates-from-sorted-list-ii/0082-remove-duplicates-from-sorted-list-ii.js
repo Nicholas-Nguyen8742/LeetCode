@@ -27,9 +27,6 @@ var deleteDuplicates = function(head) {
     }
     temp = temp.next;
   }
-
-  temp = head;
-  let prev = null;
   
   map.forEach((val, key) => {
     if (val === false) {
