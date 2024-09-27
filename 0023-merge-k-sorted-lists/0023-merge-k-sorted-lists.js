@@ -17,13 +17,13 @@ var mergeKLists = function(lists) {
   let head = new ListNode(0);
   let valuesArray = [];
 
-  for (let i = 0; i < lists.length; i++) {
-    let currList = lists[i];
+  lists.forEach((list) => {
+    let currList = list;
     while (currList) {
       valuesArray.push(currList.val);
       currList = currList.next;
     }
-  }
+  })
   
   let curr = head;
   valuesArray
