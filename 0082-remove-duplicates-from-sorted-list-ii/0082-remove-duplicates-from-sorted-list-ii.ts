@@ -22,11 +22,10 @@ function deleteDuplicates(head: ListNode | null): ListNode | null {
   const map = new Map();
 
   while (temp) {
-    if (map.has(temp.val)) {
-      map.set(temp.val, true);
-    } else {
-      map.set(temp.val, false);
-    }
+    map.has(temp.val)
+      ? map.set(temp.val, true)
+      : map.set(temp.val, false);
+
     temp = temp.next;
   }
   
