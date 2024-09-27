@@ -11,30 +11,23 @@
  */
 
 function deleteDuplicates(head: ListNode | null): ListNode | null {
+  let dummyHead = new ListNode(0);
+  dummyHead.next = head;
+
+  let prev = dummyHead;
   let temp = head;
-  if (!temp || temp.next == null) {
-    return head;
-  }
-
-  let before = new ListNode(0);
-  let dummyHead = before;
-
-  const map = new Map();
 
   while (temp) {
-    map.has(temp.val)
-      ? map.set(temp.val, true)
-      : map.set(temp.val, false);
-
+    while (temp.next && temp.val == temp.next.val) {
+      temp = temp.next;
+    }
+    if (prev.next == temp) {
+      prev = temp;
+    } else {
+      prev.next = temp.next;
+    }
     temp = temp.next;
   }
-  
-  map.forEach((val, key) => {
-    if (val === false) {
-      dummyHead.next = new ListNode(key);
-      dummyHead = dummyHead.next;
-    }
-  });
 
-  return before.next;
+  return dummyHead.next;
 };
