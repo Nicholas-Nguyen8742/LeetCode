@@ -10,7 +10,8 @@
  * }
  */
 
-function reverseList(head: ListNode | null, tail: ListNode | null = null): ListNode | null {
+function reverseList(head: ListNode | null): ListNode | null {
+  let tail = null;
   let temp = head;
   while (temp != null) {
     let nextTemp = temp.next;
