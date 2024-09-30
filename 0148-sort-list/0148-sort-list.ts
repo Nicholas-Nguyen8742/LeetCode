@@ -11,6 +11,9 @@
  */
 
 function sortList(head: ListNode | null): ListNode | null {
+  if (!head) {
+    return head;
+  }
   const result = [];
   let temp = head;
   
@@ -20,7 +23,7 @@ function sortList(head: ListNode | null): ListNode | null {
     }
     temp = temp.next;
   }
-  
+
   result.sort((a, b) => a - b);
 
   let list = new ListNode(0);
