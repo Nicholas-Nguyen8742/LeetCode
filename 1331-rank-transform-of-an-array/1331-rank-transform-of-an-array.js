@@ -8,11 +8,13 @@ var arrayRankTransform = function(arr) {
   const map = new Map();
 
   let rank = 1;
-  for (let i = 0; i < sorted.length; i++) {
-    if (!map.has(sorted[i])) {
-      map.set(sorted[i], rank);
-      rank += 1;
-    } 
+  let curr = 0;
+  while (curr < sorted.length) {
+    if (!map.has(sorted[curr])) {
+      map.set(sorted[curr], rank);
+      rank++;
+    }
+    curr++;
   }
 
   return arr.map((el) => map.get(el));
