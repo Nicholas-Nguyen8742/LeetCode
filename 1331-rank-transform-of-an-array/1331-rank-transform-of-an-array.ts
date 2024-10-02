@@ -6,10 +6,12 @@ function arrayRankTransform(arr: number[]): number[] {
   let rank = 1;
   let curr = 0;
   while (curr < sorted.length) {
-    if (!(sorted[curr] in map)) {
-      map[sorted[curr]] = rank;
-      rank++;
+    if (sorted[curr] in map) {
+      curr++;
+      continue;
     }
+    map[sorted[curr]] = rank;
+    rank++;
     curr++;
   }
 
