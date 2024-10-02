@@ -10,12 +10,11 @@
  * @return {boolean}
  */
 var isPalindrome = function(head) {
-  let temp = head;
   let result = [];
 
-  while (temp != null) {
-    result.push(temp.val);
-    temp = temp.next;
+  while (head != null) {
+    result.push(head.val);
+    head = head.next;
   }
   
   return numArrayToString(result.toReversed()) === numArrayToString(result) ;
