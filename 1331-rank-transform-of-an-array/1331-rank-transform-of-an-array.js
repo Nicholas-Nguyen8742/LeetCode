@@ -11,7 +11,7 @@ var arrayRankTransform = function(arr) {
   let curr = 0;
   while (curr < sorted.length) {
     const element = sorted[curr];
-    if (!map[element]) {
+    if (!(element in map)) {
       map[element] = rank;
       rank++;
     }
