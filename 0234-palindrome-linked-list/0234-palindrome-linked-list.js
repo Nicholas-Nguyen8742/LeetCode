@@ -9,13 +9,12 @@
  * @param {ListNode} head
  * @return {boolean}
  */
-var isPalindrome = function(head) {
-  let result = [];
-
-  while (head != null) {
+var isPalindrome = function(head, result = []) {
+  if (head != null) {
     result.push(head.val);
     head = head.next;
+    return isPalindrome(head, result);
   }
-  
-  return result.toReversed().join('') === result.join('') ;
+
+  return result.toReversed().join('') === result.join('');
 };
