@@ -17,9 +17,5 @@ var isPalindrome = function(head) {
     head = head.next;
   }
   
-  return numArrayToString(result.toReversed()) === numArrayToString(result) ;
+  return result.toReversed().join('') === result.join('') ;
 };
-
-var numArrayToString = function(arr) {
-  return arr.join('');
-}
