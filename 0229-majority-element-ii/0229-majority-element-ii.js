@@ -4,16 +4,16 @@
  */
 var majorityElement = function(nums) {
   if (nums.length < 3) {
-    const set = new Set(nums);
-    return Array.from(set);
+    return Array.from(new Set(nums));
   }
+
   const hash = new Map();
   let result = [];
 
   for (let i = 0; i < nums.length; i++) {
-    const element = hash.get(nums[i]);
-    if (element) {
-      const sum = element + 1;
+    const currCount = hash.get(nums[i]);
+    if (currCount) {
+      const sum = currCount + 1;
       if (sum > (nums.length / 3) && !result.includes(nums[i])) {
         result.push(nums[i]);
       }
@@ -22,6 +22,6 @@ var majorityElement = function(nums) {
       hash.set(nums[i], 1);
     }
   }
-  
+
   return result;
 };
