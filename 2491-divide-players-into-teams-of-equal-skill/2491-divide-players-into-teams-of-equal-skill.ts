@@ -4,7 +4,7 @@ function dividePlayers(skill: number[]): number {
   let teamChemistry = 0;
   const totalSkill = skill[0] + skill[skill.length - 1];
 
-  while (skill.length) {
+  for (let i = 0; skill.length; i++) {
     const firstEl = skill.shift();
     const lastEl = skill.pop();
 
