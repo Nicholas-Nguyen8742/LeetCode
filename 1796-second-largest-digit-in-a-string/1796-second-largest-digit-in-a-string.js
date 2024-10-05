@@ -9,8 +9,7 @@ var secondHighest = function(s) {
     return -1;
   }
   
-  const numberArray = stringNumberArray.map((str) => parseInt(str));
-  const set = new Set(numberArray);
+  const set = new Set(stringNumberArray.map((str) => parseInt(str)));
   if (set.size === 1) {
     return -1;
   }
