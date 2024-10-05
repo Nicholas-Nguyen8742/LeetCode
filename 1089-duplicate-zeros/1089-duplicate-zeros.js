@@ -13,6 +13,5 @@ var duplicateZeros = function(arr) {
     i++;
   }
   
-  const newLength = i + 1;
-  arr.splice(originalLength, newLength - originalLength);
+  arr.splice(originalLength, (i + 1) - originalLength);
 };
