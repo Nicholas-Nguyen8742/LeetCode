@@ -5,17 +5,19 @@ function majorityElement(nums: number[]): number[] {
 
   const hash = new Map();
   let result = [];
+  const length = nums.length;
 
-  for (let i = 0; i < nums.length; i++) {
-    const currCount = hash.get(nums[i]);
+  for (let i = 0; i < length; i++) {
+    const curr = nums[i];
+    const currCount = hash.get(curr);
     if (currCount) {
       const sum = currCount + 1;
-      if (sum > (nums.length / 3) && !result.includes(nums[i])) {
-        result.push(nums[i]);
+      if (sum > (length / 3) && !result.includes(curr)) {
+        result.push(curr);
       }
-      hash.set(nums[i], sum);
+      hash.set(curr, sum);
     } else {
-      hash.set(nums[i], 1);
+      hash.set(curr, 1);
     }
   }
 
