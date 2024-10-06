@@ -1,5 +1,5 @@
 function dominantIndex(nums: number[]): number {
-  let max = Math.max(...nums);
+  const max = Math.max(...nums);
   let maxIndex;
   for (let i = 0; i < nums.length; i++) {
     if (max === nums[i]) {
@@ -10,6 +10,7 @@ function dominantIndex(nums: number[]): number {
     if (2 * (nums[i]) <= max) {
       continue;
     }
+
     return -1;
   }
   
