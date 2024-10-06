@@ -30,4 +30,4 @@ var clearDigits = function(s) {
 
 var replaceString = function(s, index) {
   return s.substring(0, index) + s.substring(index + 1);
-}
+};
