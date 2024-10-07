@@ -3,11 +3,10 @@
  * @return {number}
  */
 var minLength = function(s) {
-  let str = s;
-  while (str.includes('AB') || str.includes('CD')) {
-    str = str.replaceAll('CD', '');
-    str = str.replaceAll('AB', '');
+  while (s.includes('AB') || s.includes('CD')) {
+    s = s.replaceAll('CD', '');
+    s = s.replaceAll('AB', '');
   }
 
-  return str.length;
+  return s.length;
 };
