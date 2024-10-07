@@ -1,8 +1,11 @@
 function minLength(s: string): number {
-  while (s.includes('AB') || s.includes('CD')) {
-    s = s.replaceAll('CD', '');
-    s = s.replaceAll('AB', '');
+  const stack = [];
+  for (const char of s) {
+    if (char == 'B' && stack[stack.length - 1] === 'A' || char == 'D' && stack[stack.length - 1] === 'C') {
+      stack.pop();
+    } else {
+      stack.push(char);
+    }
   }
-
-  return s.length;
+  return stack.length;
 };
