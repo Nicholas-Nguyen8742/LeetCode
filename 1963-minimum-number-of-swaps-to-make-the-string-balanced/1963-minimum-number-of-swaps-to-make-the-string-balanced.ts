@@ -1,15 +1,11 @@
-/**
- * @param {string} s
- * @return {number}
- */
-var minSwaps = function(s) {
+function minSwaps(s: string): number {
   let size = 0;
   for (const char of s) {
     if (char === '[') {
-      size++;
+      size += 1;
     } else {
       if (size > 0) {
-        size--;
+        size -= 1;
       }
     }
   }
