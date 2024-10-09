@@ -10,11 +10,8 @@ function isIsomorphic(s: string, t: string): boolean {
   for (let i = 0; i < s.length; i++) {
     const sVal = map.get(s[i]);
     const tVal = compareMap.get(t[i]);
-    if (sVal != null || tVal != null) {
-      if (sVal !== tVal) {
-        return false;
-      }
-      continue;
+    if (sVal !== tVal) {
+      return false;
     }
     
     map.set(s[i], i);
