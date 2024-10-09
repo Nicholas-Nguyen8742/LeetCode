@@ -8,17 +8,12 @@ var isHappy = function(n) {
     return ['1', '7'].includes(stringified);
   }
 
-  return isHappy(calculateSum(stringified));
-};
-
-var calculateSum = function(str) {
-  return str.split('').reduce((acc, curr) => {
+  return isHappy(stringified.split('').reduce((acc, curr) => {
     acc += toSquared(curr);
     return acc;
-  }, 0);
+  }, 0));
 };
 
 var toSquared = function(n) {
-  const cleanNum = typeof n === 'string' ? parseInt(n, 10) : n;
-  return Math.pow(cleanNum, 2);
+  return Math.pow(parseInt(n, 10), 2);
 };
