@@ -1,8 +1,4 @@
-/**
- * @param {string} s
- * @return {number}
- */
-var minAddToMakeValid = function(s) {
+function minAddToMakeValid(s: string): number {
   if (!s.length) {
     return 0; 
   }
