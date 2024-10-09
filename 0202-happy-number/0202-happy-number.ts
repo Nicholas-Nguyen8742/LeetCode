@@ -3,13 +3,11 @@ function isHappy(n: number): boolean {
   if (stringified.length === 1) {
     return ['1', '7'].includes(stringified);
   }
-  
-  const sum = stringified.split('').reduce((acc, curr) => {
+
+  return isHappy(stringified.split('').reduce((acc, curr) => {
     acc += toSquared(curr);
     return acc;
-  }, 0);
-
-  return isHappy(sum);
+  }, 0));
 };
 
 function toSquared(n: string): number {
