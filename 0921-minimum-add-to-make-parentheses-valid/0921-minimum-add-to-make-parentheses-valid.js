@@ -7,9 +7,7 @@ var minAddToMakeValid = function(s) {
     return 0; 
   }
 
-  let open = 0;
-  let count = 0;
-  let i = 0;
+  let open = 0, count = 0, i = 0;
   while (i < s.length) {   
     if (s[i] === '(') {
       open++;
