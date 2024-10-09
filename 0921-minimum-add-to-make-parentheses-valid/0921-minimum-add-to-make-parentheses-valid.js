@@ -1,13 +1,17 @@
-function minAddToMakeValid(s: string): number {
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var minAddToMakeValid = function(s) {
   if (!s.length) {
     return 0; 
   }
 
   let open = 0;
   let count = 0;
-
-  for (const char of s) {   
-    if (char === '(') {
+  let i = 0;
+  while (i < s.length) {   
+    if (s[i] === '(') {
       open++;
     } else {
       if (open > 0) {
@@ -16,6 +20,7 @@ function minAddToMakeValid(s: string): number {
         count++;
       }
     }
+    i++;
   }
   return count + open;
 };
