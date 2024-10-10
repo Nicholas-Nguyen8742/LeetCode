@@ -11,16 +11,15 @@ var convert = function(s, numRows) {
   const result = Array.from({ length: numRows }, () => []);
   let rowIndex = 0;
   let reverse = false;
-  let columnIndex = 0;
 
   for (let i = 0; i < s.length; i++) {
     result[rowIndex].push(s[i]);
     reverse ? rowIndex-- : rowIndex++;
     if (rowIndex === numRows - 1 || rowIndex === 0) {
-      columnIndex++;
       reverse = !reverse;
     }
   }
+
   let resultString = '';
   for (let i = 0; i < numRows; i++) {
     for (let j = 0; j < result[i].length; j++) {
