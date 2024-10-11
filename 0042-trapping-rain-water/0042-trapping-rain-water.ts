@@ -1,9 +1,5 @@
 function trap(height: number[]): number {
-  let count = 0;
-  let right = height.length - 1;
-  let rightMax = height[right];
-  let left = 0;
-  let leftMax = height[left];
+  let count = 0, right = height.length - 1, rightMax = height[right], left = 0, leftMax = height[left];
 
   while (left < right) {
     if (leftMax <= rightMax) {
