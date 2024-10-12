@@ -13,11 +13,7 @@ var maxFrequencyElements = function(nums) {
   }
   
   let multiplier = 0;
-  for (const [key, value] of Object.entries(map)) {
-    if (value === max) {
-      multiplier++;
-    }
-  }
+  for (const [key, value] of Object.entries(map)) if (value === max) multiplier++;
 
   return multiplier * max;
 };
