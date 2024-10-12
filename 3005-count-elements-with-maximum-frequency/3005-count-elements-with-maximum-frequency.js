@@ -8,14 +8,8 @@ var maxFrequencyElements = function(nums) {
 
   for (let i = 0; i < nums.length; i++) {
     const currCount = map[nums[i]];
-    if (currCount == null) {
-      map[nums[i]] = 1;
-      max = Math.max(max, 1); 
-    } else {
-      const newValue = currCount + 1;
-      map[nums[i]] = newValue;
-      max = Math.max(max, newValue);
-    }
+    map[nums[i]] = currCount == null ? 1 : currCount + 1;
+    max = currCount == null ? Math.max(max, 1) : Math.max(max, currCount + 1);
   }
   
   let multiplier = 0;
