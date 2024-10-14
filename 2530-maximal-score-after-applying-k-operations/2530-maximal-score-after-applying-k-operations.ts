@@ -1,5 +1,9 @@
 function maxKelements(nums: number[], k: number): number {
-  const maxHeap = createMaxHeapFromArray(nums);
+  const maxHeap = new MaxPriorityQueue();
+
+  for (const num of nums) {
+    maxHeap.enqueue(num);
+  }
 
   let score = 0;
 
@@ -16,14 +20,4 @@ function maxKelements(nums: number[], k: number): number {
 
 function convertElement(value: number): number {
   return Math.ceil(value / 3);
-};
-
-function createMaxHeapFromArray(array: number[]) {
-  const maxHeap = new MaxPriorityQueue();
-
-  for (const element of array) {
-    maxHeap.enqueue(element);
-  }
-
-  return maxHeap;
 };
