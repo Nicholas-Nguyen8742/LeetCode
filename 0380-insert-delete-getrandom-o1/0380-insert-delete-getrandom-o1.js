@@ -1,6 +1,15 @@
 
 var RandomizedSet = function() {
-  this.set = new Set();
+  this.map = new Map();
+  this.stack = [];
+};
+
+/** 
+ * @param {number} val
+ * @return {boolean}
+ */
+RandomizedSet.prototype.search = function(val) {
+  return this.map.has(val);
 };
 
 /** 
@@ -8,11 +17,12 @@ var RandomizedSet = function() {
  * @return {boolean}
  */
 RandomizedSet.prototype.insert = function(val) {
-  if (this.set.has(val)) {
+  if (this.search(val)) {
     return false;
   }
-  
-  this.set.add(val);
+
+  this.stack.push(val);
+  this.map.set(val, this.stack.length - 1);
   return true;
 };
 
@@ -21,20 +31,24 @@ RandomizedSet.prototype.insert = function(val) {
  * @return {boolean}
  */
 RandomizedSet.prototype.remove = function(val) {
-  if (this.set.has(val)) {
-    this.set.delete(val);
-    return true;
+  const valueIndex = this.map.get(val);
+  if (valueIndex == null) {
+    return false;
   }
-  return false;
+  
+  this.stack[valueIndex] = this.stack[this.stack.length - 1];
+  this.map.set(this.stack[valueIndex], valueIndex);
+  this.stack.pop();
+  this.map.delete(val);
+  return true;
 };
 
 /**
  * @return {number}
  */
 RandomizedSet.prototype.getRandom = function() {
-  const array = Array.from(this.set);
-  const randomIndex = Math.floor(Math.random() * this.set.size);
-  return array[randomIndex];
+  const randomIndex = Math.floor(Math.random() * this.stack.length);
+  return this.stack[randomIndex];
 };
 
 /** 
