@@ -7,10 +7,12 @@ var hIndex = function(citations) {
 
   citations.sort((a, b) => a - b);
 
-  for (let i = 0; i < n; i++) {
+  let i = 0;
+  while (i < n) {
     if (citations[i] >= n - i) {
       return n - i;
     }
+    i++;
   }
 
   return 0;
