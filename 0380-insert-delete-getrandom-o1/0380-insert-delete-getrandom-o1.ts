@@ -1,29 +1,40 @@
 class RandomizedSet {
-  set: Set<number>;
+  map: Map<number, number>;
+  stack: number[];
   constructor() {
-    this.set = new Set();
+    this.map = new Map();
+    this.stack = [];
+  }
+
+  search(val: number): boolean {
+    return this.map.has(val);
   }
 
   insert(val: number): boolean {
-    if (this.set.has(val)) {
+    if (this.search(val)) {
       return false;
     }
     
-    this.set.add(val);
+    this.map.set(val, this.stack.length);
+    this.stack.push(val);
     return true;
   }
 
   remove(val: number): boolean {
-    if (this.set.has(val)) {
-      this.set.delete(val);
+    if (this.search(val)) {
+      const valueIndex = this.map.get(val);
+      this.stack[valueIndex] = this.stack[this.stack.length - 1];
+      this.map.set(this.stack[valueIndex], valueIndex);
+      this.stack.pop();
+      this.map.delete(val);
       return true;
     }
     return false;
   }
 
   getRandom(): number {
-    const randomIndex = Math.floor(Math.random() * this.set.size);
-    return Array.from(this.set)[randomIndex];
+    const randomIndex = Math.floor(Math.random() * this.map.size);
+    return this.stack[randomIndex];
   }
 }
 
