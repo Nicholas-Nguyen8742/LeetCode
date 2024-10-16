@@ -6,24 +6,24 @@ function findRestaurant(list1: string[], list2: string[]): string[] {
     map.set(list1[i], [i, null]);
   }
 
-  for (let i = 0; i < list2.length; i++) {
-    const hasValue = map.has(list2[i]);
+  for (let j = 0; j < list2.length; j++) {
+    const hasValue = map.has(list2[j]);
     if (hasValue) {
-      const value = map.get(list2[i]);
-      map.set(list2[i], [value[0], i]);
-      min = Math.min(value[0] + i, min);
+      const value = map.get(list2[j]);
+      map.set(list2[j], [value[0], j]);
+      min = Math.min(value[0] + j, min);
     }
   }
-  
-  map.forEach((value, key, map) => {
-    if (value[1] == null) {
+
+  map.forEach(([val1, val2], key, map) => {
+    if (val2 == null) {
       return;
     }
-    const indexSum = value[0] + value[1];
+    const indexSum = val1 + val2;
     if (indexSum === min) {
       result.push(key);
     }
   });
-  
+
   return result;
 };
