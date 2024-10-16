@@ -9,14 +9,15 @@ var findRestaurant = function(list1, list2) {
   let result = [];
   for (let i = 0; i < list1.length; i++) {
     map.set(list1[i], [i, null]);
-  }
-
-  for (let i = 0; i < list2.length; i++) {
-    const hasValue = map.has(list2[i]);
-    if (hasValue) {
-      const value = map.get(list2[i]);
-      map.set(list2[i], [value[0], i]);
-      min = Math.min(value[0] + i, min);
+    if (list2.includes(list1[i])) {
+      for (let j = 0; j < list2.length; j++) {
+        const hasValue = map.has(list2[j]);
+        if (hasValue) {
+          const value = map.get(list2[j]);
+          map.set(list2[j], [value[0], j]);
+          min = Math.min(value[0] + j, min);
+        }
+      }
     }
   }
   
