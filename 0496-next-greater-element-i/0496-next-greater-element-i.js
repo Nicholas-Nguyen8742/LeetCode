@@ -14,13 +14,13 @@ var nextGreaterElement = function(nums1, nums2) {
     }
     
     const newN2 = nums2.slice(foundIndex + 1);
-    let newFoundIndex = newN2.findIndex((el) => el > nums1[i]);
-    if (newFoundIndex === -1) {
+    foundIndex = newN2.findIndex((el) => el > nums1[i]);
+    if (foundIndex === -1) {
       result.push(-1);
       continue;
     }
 
-    result.push(newN2[newFoundIndex]);
+    result.push(newN2[foundIndex]);
   }
   
   return result;
