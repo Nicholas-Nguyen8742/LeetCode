@@ -1,4 +1,9 @@
-function findKthBit(n: number, k: number): string {
+/**
+ * @param {number} n
+ * @param {number} k
+ * @return {character}
+ */
+var findKthBit = function(n, k) {
   if (n === 1) return '0';
     
   const length = (1 << n) - 1;
