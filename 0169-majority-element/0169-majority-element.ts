@@ -23,5 +23,6 @@ function majorityElement(nums: number[]): number {
       kElement = key;
     }
   });
+
   return kElement;
 };
