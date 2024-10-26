@@ -3,12 +3,12 @@ function groupAnagrams(strs: string[]): string[][] {
 
   for (let i = 0; i < strs.length; i++) {
     const currWord = strs[i];
-    const transformedWord = currWord.split('').sort().join('');
+    const uniqueKey = currWord.split('').sort().join('');
     const result = [currWord];
-    if (transformedWord in map) {
-      result.push(...map[transformedWord]);
+    if (uniqueKey in map) {
+      result.push(...map[uniqueKey]);
     }
-    map[transformedWord] = result;
+    map[uniqueKey] = result;
   }
 
   return Object.values(map);
