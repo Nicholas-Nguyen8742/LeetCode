@@ -1,15 +1,15 @@
 function groupAnagrams(strs: string[]): string[][] {
-  const map = new Map();
-  
+  const map = {};
+
   for (let i = 0; i < strs.length; i++) {
     const currWord = strs[i];
     const transformedWord = currWord.split('').sort().join('');
-    if (map.has(transformedWord)) {
-      map.set(transformedWord, [...map.get(transformedWord), currWord])
+    if (transformedWord in map) {
+      map[transformedWord] = [...map[transformedWord], currWord]
     } else {
-      map.set(transformedWord, [currWord]);
+      map[transformedWord] = [currWord];
     }
   }
-  
-  return Array.from(map.values());
+
+  return Object.values(map);
 };
