@@ -20,9 +20,8 @@ var topKFrequent = function(nums, k) {
     map.set(num, result);
   });
   
-  let result = [max.value];
-  map.delete(max.value);
-  let i = 1;
+  let result = [];
+  let i = 0;
   while (i < k) {
     const removedElement = findNextMaxValue(map);
     map.delete(removedElement);
