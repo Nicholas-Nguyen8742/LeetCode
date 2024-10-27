@@ -1,6 +1,11 @@
 function topKFrequent(nums: number[], k: number): number[] {
-  const map = createFrequencyMap(nums);
-  
+  const map = new Map();
+
+  nums.forEach((num) => {
+    const search = map.get(num);
+    map.set(num, search != null ? search + 1 : 1);
+  });
+
   let result = [];
   let i = 0;
   while (i < k) {
@@ -11,17 +16,6 @@ function topKFrequent(nums: number[], k: number): number[] {
   }
 
   return result;
-};
-
-var createFrequencyMap = function(array: number[]): Map<number, number> {
-  const map = new Map();
-
-  array.forEach((num) => {
-    const search = map.get(num);
-    map.set(num, search != null ? search + 1 : 1);
-  });
-
-  return map;
 };
 
 var findNextMaxValue = function(map: Map<number, number>): number {
