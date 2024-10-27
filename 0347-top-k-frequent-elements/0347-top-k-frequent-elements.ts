@@ -19,7 +19,7 @@ function topKFrequent(nums: number[], k: number): number[] {
 };
 
 var findNextMaxValue = function(map: Map<number, number>): number {
-  const max = Math.max(...Array.from(map.values()));
+  const max = Math.max(...map.values());
   let result: number | undefined;
 
   for (const [key, value] of map) {
