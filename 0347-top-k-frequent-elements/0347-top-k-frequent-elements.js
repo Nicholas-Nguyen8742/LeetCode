@@ -30,17 +30,15 @@ var createFrequencyMap = function(array) {
 };
 
 var findNextMaxValue = function(map) {
-  let max = {
-    value: -Infinity,
-    count: -Infinity,
-  };
+  const max = Math.max(...Array.from(map.values()));
+  let result;
 
   for (const [key, value] of map) {
-    if (max.count < value) {
-      max.value = key;
-      max.count = value;
+    if (max === value) {
+      result = key;
+      break;
     }
   }
 
-  return max.value;
+  return result;
 };
