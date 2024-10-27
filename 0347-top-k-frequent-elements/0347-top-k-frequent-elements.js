@@ -5,19 +5,10 @@
  */
 var topKFrequent = function(nums, k) {
   const map = new Map();
-  let max = {
-    value: -Infinity,
-    count: -Infinity,
-  };
 
   nums.forEach((num) => {
     const search = map.get(num);
-    const result = search != null ? search + 1 : 1;
-    if (max.count < result) {
-      max.value = num;
-      max.count = result
-    }
-    map.set(num, result);
+    map.set(num, search != null ? search + 1 : 1);
   });
   
   let result = [];
