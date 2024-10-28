@@ -3,16 +3,13 @@ class Solution:
         streak = -1;
         unique = set(nums);
 
-        i = 0;
-        while i < len(nums):
-            curr = nums[i]
+        for curr in nums:
             length = 0
             while curr in unique:
                 length += 1
                 curr = curr ** 2
 
             if length > 1:
-                streak = max(streak, length)       
-            i += 1
+                streak = max(streak, length)        
 
         return streak
