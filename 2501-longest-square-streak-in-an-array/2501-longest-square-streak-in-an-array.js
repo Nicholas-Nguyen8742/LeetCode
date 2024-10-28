@@ -4,7 +4,6 @@
  */
 var longestSquareStreak = function(nums) {
   let streak = -1;
-  nums.sort((a, b) => Number(a) - Number(b));
   const set = new Set(nums);
 
   for (let i = 0; i < nums.length; i++) {
