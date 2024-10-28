@@ -12,9 +12,7 @@ class Solution:
                 curr = curr ** 2
 
             if length > 1:
-                streak = max(streak, length)
-
+                streak = max(streak, length)       
             i += 1
-        
 
         return streak
