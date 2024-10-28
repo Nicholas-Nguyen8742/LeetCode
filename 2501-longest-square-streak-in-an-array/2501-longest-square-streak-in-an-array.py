@@ -1,5 +1,9 @@
-class Solution:
-    def longestSquareStreak(self, nums: List[int]) -> int:
+class Solution(object):
+    def longestSquareStreak(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
         streak = -1;
         unique = set(nums);
 
@@ -13,3 +17,4 @@ class Solution:
                 streak = max(streak, length)        
 
         return streak
+        
