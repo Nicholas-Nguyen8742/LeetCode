@@ -7,7 +7,9 @@ class Solution(object):
         streak = -1;
         unique = set(nums);
 
-        for curr in nums:
+        i = 0
+        while i < len(nums):
+            curr = nums[i]
             length = 0
             while curr in unique:
                 length += 1
@@ -15,6 +17,7 @@ class Solution(object):
 
             if length > 1:
                 streak = max(streak, length)        
+            i += 1
 
         return streak
         
