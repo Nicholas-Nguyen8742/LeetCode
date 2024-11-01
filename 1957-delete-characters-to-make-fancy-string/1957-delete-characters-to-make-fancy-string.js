@@ -3,22 +3,20 @@
  * @return {string}
  */
 var makeFancyString = function(s) {
+  let prev = s[0];
   let result = s[0];
   let consecutiveCount = 1;
-  let i = 1;
-  while (i < s.length) {
-    if (s[i] === result[result.length - 1]) {
+  const str = s.substring(1, s.length);
+  for (const char of str) {
+    if (char === prev) {
       consecutiveCount++;
     } else {
+      prev = char;
       consecutiveCount = 1;
     }
-    
     if (consecutiveCount < 3) {
-      result += s[i];
+      result += char;
     }
-
-    i++;
   }
-  
   return result;
 };
