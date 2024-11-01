@@ -6,16 +6,16 @@ var makeFancyString = function(s) {
   let prev = s[0];
   let result = s[0];
   let consecutiveCount = 1;
-  const str = s.substring(1, s.length);
-  for (const char of str) {
-    if (char === prev) {
+
+  for (let i = 1; i < s.length; i++) {
+    if (s[i] === prev) {
       consecutiveCount++;
     } else {
-      prev = char;
+      prev = s[i];
       consecutiveCount = 1;
     }
     if (consecutiveCount < 3) {
-      result += char;
+      result += s[i];
     }
   }
   return result;
