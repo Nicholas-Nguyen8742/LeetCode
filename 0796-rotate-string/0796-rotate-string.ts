@@ -3,6 +3,13 @@ function rotateString(s: string, goal: string): boolean {
     return false;
   }
   
+  const length = s.length;
   
-  return (s + s).includes(goal);
+  for (let i = 0; i < length; i++) {
+    s = s.substring(1, length) + s.substring(0, 1);
+    if (s === goal) {
+      return true;
+    }
+  }
+  return false;
 };
