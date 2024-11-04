@@ -1,7 +1,3 @@
-/**
- * @param {string} word
- * @return {string}
- */
 var compressedString = function(word) {
   let result = '';
   let currChar = word[0];
