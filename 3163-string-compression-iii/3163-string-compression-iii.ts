@@ -2,7 +2,9 @@ function compressedString(word: string): string {
   let result = '';
   let currChar = word[0];
   let currCount = 1;
-  for (let i = 1; i < word.length + 1; i++) {
+  let i = 1;
+  let condition = word.length + 1;
+  do {
     const char = word[i];
     if (char === currChar) {
       if (currCount === 9) {
@@ -11,14 +13,14 @@ function compressedString(word: string): string {
       } else {
         currCount++;
       }
-      continue;
+    } else {
+     result += `${currCount}${currChar}`;
+
+      currChar = char;
+      currCount = 1; 
     }
-
-    result += `${currCount}${currChar}`;
-
-    currChar = char;
-    currCount = 1;
-  }
+    i++;
+  } while (i < condition);
 
   return result;
 };
