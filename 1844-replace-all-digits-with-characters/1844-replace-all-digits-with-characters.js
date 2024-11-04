@@ -9,7 +9,7 @@ var replaceDigits = function(s) {
     if (i % 2 == 0) {
       result += s[i];
     } else {
-      result += String.fromCharCode(s[i - 1].charCodeAt() + parseInt(s[i]));
+      result += String.fromCharCode(s.charCodeAt(i - 1) + parseInt(s[i]));
     }
   }
   return result;
