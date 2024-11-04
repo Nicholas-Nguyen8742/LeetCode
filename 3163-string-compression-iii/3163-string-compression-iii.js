@@ -4,7 +4,7 @@ var compressedString = function(word) {
   let currCount = 1;
   let i = 1;
   let condition = word.length + 1;
-  while (i < condition) {
+  do {
     const char = word[i];
     if (char === currChar) {
       if (currCount === 9) {
@@ -20,7 +20,7 @@ var compressedString = function(word) {
       currCount = 1; 
     }
     i++;
-  }
+  } while (i < condition);
 
   return result;
 };
