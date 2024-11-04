@@ -4,10 +4,10 @@
  */
 var scoreOfString = function(s) {
   let sum = 0;
-  let stopCondition = s.length - 1;
-
-  for (let i = 0; i < stopCondition; i++) {
+  let i = 0;
+  while (i < s.length - 1) {
     sum += Math.abs(s.charCodeAt(i) - s.charCodeAt(i + 1));
+    i++;
   }
 
   return sum;
