@@ -2,14 +2,13 @@
  * @param {string} s
  * @return {number}
  */
-function minChanges(s: string): number {
-  let minChangesRequired = 0;
-  
-  for (let i = 0; i < s.length; i += 2) {
-    if (s[i] != s[i + 1]) {
-      minChangesRequired += 1;
-    }
+function minChanges(s: string, minChangeCount: number = 0): number {
+  if (s.length === 0) {
+    return minChangeCount;
+  }
+  if (s[0] != s[1]) {
+    minChangeCount += 1;
   }
 
-  return minChangesRequired;
+  return minChanges(s.substring(2, s.length), minChangeCount);
 };
