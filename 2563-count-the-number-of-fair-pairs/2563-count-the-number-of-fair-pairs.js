@@ -6,22 +6,21 @@
  */
 var countFairPairs = function(nums, lower, upper) {
   nums.sort((a, b) => a - b);
-  return countPairs(nums, upper) - countPairs(nums, lower - 1);
-};
+  var countPairs = function(target) {
+    let count = 0;
+    let left = 0;
+    let right = nums.length - 1;
 
-var countPairs = function(nums, target) {
-  let count = 0;
-  let left = 0;
-  let right = nums.length - 1;
-
-  while (left < right) {
-    if (nums[left] + nums[right] > target) {
-      right--;
-    } else {
-      count += right - left;
-      left++;
+    while (left < right) {
+      if (nums[left] + nums[right] > target) {
+        right--;
+      } else {
+        count += right - left;
+        left++;
+      }
     }
-  }
 
-  return count;
-}
+    return count;
+  };
+  return countPairs(upper) - countPairs(lower - 1);
+};
