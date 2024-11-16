@@ -11,7 +11,7 @@ var frequencySort = function(nums) {
   for (let i = 0; i < nums.length; i++) {
     const key = nums[i];
     const possibleIndex = indexes[key];
-    if (indexes[key] == null) {
+    if (possibleIndex == null) {
       result.push({ key, value: 1 });
       values[key] = 1;
       indexes[key] = nextIndex;
