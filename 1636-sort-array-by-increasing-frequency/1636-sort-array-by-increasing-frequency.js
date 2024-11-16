@@ -5,13 +5,15 @@
 var frequencySort = function(nums) {
   let indexes = { };
   let result = [];
+  let nextIndex = 0;
 
   for (let i = 0; i < nums.length; i++) {
     const key = nums[i];
     const possibleIndex = indexes[key];
     if (possibleIndex == null) {
       result.push({ key, value: 1 });
-      indexes[key] = result.length - 1;
+      indexes[key] = nextIndex;
+      nextIndex++;
     } else {
       let element = result[possibleIndex];
       const newValue = element.value + 1;
