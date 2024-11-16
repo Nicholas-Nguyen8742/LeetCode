@@ -4,12 +4,14 @@ function frequencySort(nums: number[]): number[] {
 
   for (let i = 0; i < nums.length; i++) {
     const key = nums[i];
-    if (!(key in indexes)) {
+    const possibleIndex = indexes[key];
+    if (possibleIndex == null) {
       result.push({ key, value: 1 });
       indexes[key] = result.length - 1;
     } else {
-      const newValue = result[indexes[key]].value + 1;
-      result[indexes[key]] = {
+      let element = result[possibleIndex];
+      const newValue = element.value + 1;
+      result[possibleIndex] = {
         key,
         value: newValue
       }
