@@ -15,10 +15,10 @@ var frequencySort = function(nums) {
         key,
         value: newValue
       }
-    } else {
-      result.push({ key, value: 1 });
-      indexes[key] = result.length - 1;
+      continue;
     }
+    result.push({ key, value: 1 });
+    indexes[key] = result.length - 1;
   }
 
   return result
