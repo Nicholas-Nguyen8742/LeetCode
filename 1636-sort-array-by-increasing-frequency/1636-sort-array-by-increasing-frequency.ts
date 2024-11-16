@@ -19,7 +19,7 @@ var toArray = function(map: Map<number, number>): number[] {
   return result.sort(sortComparator).flatMap(fillElement);
 };
 
-var sortComparator = function(a: { key: number; value:number; }, b: { key: number; value:number; }) {
+var sortComparator = function(a: { key: number; value: number; }, b: { key: number; value: number; }) {
   if (a.value === b.value) {
     return b.key - a.key; 
   } else {
@@ -27,6 +27,6 @@ var sortComparator = function(a: { key: number; value:number; }, b: { key: numbe
   }
 }
 
-var fillElement = function(el: { key: number; value:number; }) {
+var fillElement = function(el: { key: number; value: number; }) {
   return new Array(el.value).fill(el.key);
 };
