@@ -17,13 +17,13 @@ function frequencySort(nums: number[]): number[] {
   }
 
   return result
-    .sort(function(a, b) {
+    .sort((a, b) => {
       if (a.value === b.value) {
         return b.key - a.key; 
       }
       return a.value - b.value;
     })
-    .flatMap(function(el) {
+    .flatMap((el) => {
       return new Array(el.value).fill(el.key);
     });
 }
