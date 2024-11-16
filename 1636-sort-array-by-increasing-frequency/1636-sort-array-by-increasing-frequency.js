@@ -12,22 +12,18 @@ var frequencySort = function(nums) {
     const key = nums[i];
     const possibleIndex = indexes[key];
     if (possibleIndex == null) {
-      result.push({ key, value: 1 });
+      result.push([key, 1]);
       values[key] = 1;
       indexes[key] = nextIndex;
       nextIndex++;
     } else {
-      values[key] + 1
       const newValue = values[key] + 1;
       values[key] = newValue;
-      result[possibleIndex] = {
-        key,
-        value: newValue
-      }
+      result[possibleIndex] = [key, newValue];
     }
   }
 
   return result
-    .sort((a, b) => a.value === b.value ? b.key - a.key : a.value - b.value)
-    .flatMap((el) => new Array(el.value).fill(el.key));
+    .sort((a, b) => a[1] === b[1] ? b[0] - a[0] : a[1] - b[1])
+    .flatMap((el) => new Array(el[1]).fill(el[0]))
 };
