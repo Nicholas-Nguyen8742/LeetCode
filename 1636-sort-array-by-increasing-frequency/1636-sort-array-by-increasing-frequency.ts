@@ -1,18 +1,28 @@
 function frequencySort(nums: number[]): number[] {
   const map = new Map();
+  let indexes = { };
+  let result = [];
+
   for (let i = 0; i < nums.length; i++) {
     const key = nums[i];
     const value = map.get(key);
-    
-    value != null ? map.set(key, value + 1) : map.set(key, 1);
+    if (value != null) {
+      const currIndex = indexes[key];
+      const prev = result[currIndex];
+      const newValue = value + 1;
+      result[currIndex] = {
+        ...prev,
+        value: newValue
+      }
+      map.set(key, newValue);
+    } else {
+      result.push({ key, value: 1 });
+      indexes[key] = result.length - 1;
+      map.set(key, 1);
+    }
   }
-  let result = [];
-  map.forEach((value, key) => {
-    result.push({ key, value });
-  });
 
   return result.sort(sortComparator).flatMap(fillElement);
-  
 };
 
 var sortComparator = function(a: { key: number; value: number; }, b: { key: number; value: number; }) {
