@@ -17,13 +17,6 @@ function frequencySort(nums: number[]): number[] {
   }
 
   return result
-    .sort((a, b) => {
-      if (a.value === b.value) {
-        return b.key - a.key; 
-      }
-      return a.value - b.value;
-    })
-    .flatMap((el) => {
-      return new Array(el.value).fill(el.key);
-    });
+    .sort((a, b) => a.value === b.value ? b.key - a.key : a.value - b.value)
+    .flatMap((el) => new Array(el.value).fill(el.key));
 }
