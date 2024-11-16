@@ -11,10 +11,9 @@ var frequencySort = function(nums) {
     const key = nums[i];
     const value = map.get(key);
     if (value != null) {
-      const currIndex = indexes[key];
-      const prev = result[currIndex];
+      const prev = result[indexes[key]];
       const newValue = value + 1;
-      result[currIndex] = {
+      result[indexes[key]] = {
         ...prev,
         value: newValue
       }
