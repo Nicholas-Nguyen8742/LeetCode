@@ -8,27 +8,21 @@ var frequencySort = function(nums) {
 
   for (let i = 0; i < nums.length; i++) {
     const key = nums[i];
-    const element = key in indexes && result[indexes[key]];
-    if (element) {
+    const possibleIndex = indexes[key];
+    if (possibleIndex == null) {
+      result.push({ key, value: 1 });
+      indexes[key] = result.length - 1;
+    } else {
+      let element = result[possibleIndex];
       const newValue = element.value + 1;
-      result[indexes[key]] = {
+      result[possibleIndex] = {
         key,
         value: newValue
       }
-      continue;
     }
-    result.push({ key, value: 1 });
-    indexes[key] = result.length - 1;
   }
 
   return result
-    .sort(function(a, b) {
-      if (a.value === b.value) {
-        return b.key - a.key; 
-      }
-      return a.value - b.value;
-    })
-    .flatMap(function(el) {
-      return new Array(el.value).fill(el.key);
-    });
+    .sort((a, b) => a.value === b.value ? b.key - a.key : a.value - b.value)
+    .flatMap((el) => new Array(el.value).fill(el.key));
 };
