@@ -15,8 +15,7 @@ var frequencySort = function(nums) {
       indexes[key] = nextIndex;
       nextIndex++;
     } else {
-      let element = result[possibleIndex];
-      const newValue = element.value + 1;
+      const newValue = result[possibleIndex].value + 1;
       result[possibleIndex] = {
         key,
         value: newValue
