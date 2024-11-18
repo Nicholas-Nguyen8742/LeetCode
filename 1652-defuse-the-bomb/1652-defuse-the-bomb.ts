@@ -6,9 +6,12 @@ function decrypt(code: number[], k: number): number[] {
     code.reverse();
   }
 
-  function nextK(curr) {
+  function nextK(index) {
     let res = 0;
+    if (k === 0) return 0;
+
     const condition = Math.abs(k);
+    let curr = k < 0 ? index : index + 1;
     for (let i = 0; i < condition; i++) {
       res += code[wrapIndex(k < 0 ? i - curr : i + curr, codeLength)]
     }
@@ -16,11 +19,7 @@ function decrypt(code: number[], k: number): number[] {
   }
 
   for (let i = 0; i < code.length; i++) {
-    if (k === 0) {
-      result[i] = 0;
-    } else {
-      result[i] = nextK(k < 0 ? i : i + 1);
-    }
+    result[i] = nextK(i);
   }
   return result;
 };
