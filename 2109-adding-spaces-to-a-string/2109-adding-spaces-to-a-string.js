@@ -8,9 +8,8 @@ var addSpaces = function(s, spaces) {
   let lastIndex;
 
   for (let i = 0; i <= spaces.length; i++) {
-    const index = spaces[i];
-    result += (lastIndex == null ? '' : ' ') + s.slice((lastIndex == null ? 0 : lastIndex), index);
-    lastIndex = index;
+    result += (lastIndex == null ? '' : ' ') + s.slice((lastIndex == null ? 0 : lastIndex), spaces[i]);
+    lastIndex = spaces[i];
   }
 
   return result;
