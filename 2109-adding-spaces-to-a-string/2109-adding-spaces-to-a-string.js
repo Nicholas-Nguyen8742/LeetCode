@@ -9,9 +9,7 @@ var addSpaces = function(s, spaces) {
 
   for (let i = 0; i <= spaces.length; i++) {
     const index = spaces[i];
-    const separator = lastIndex == null ? '' : ' ';
-    const startIndex = lastIndex == null ? 0 : lastIndex;
-    result += separator + s.slice(startIndex, index);
+    result += (lastIndex == null ? '' : ' ') + s.slice((lastIndex == null ? 0 : lastIndex), index);
     lastIndex = index;
   }
 
