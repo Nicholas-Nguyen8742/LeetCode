@@ -18,7 +18,7 @@ var canChange = function(start, target) {
     ) {
       return false;
     }
-    
+
     startIndex++;
     targetIndex++;
   }
