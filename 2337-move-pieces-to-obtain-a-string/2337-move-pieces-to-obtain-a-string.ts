@@ -3,13 +3,9 @@ function canChange(start: string, target: string): boolean {
   let [startIndex, targetIndex] = [0, 0];
 
   while (startIndex < startLength || targetIndex < startLength) {
-    while (startIndex < startLength && start[startIndex] == '_') {
-      startIndex++;
-    }
+    while (startIndex < startLength && start[startIndex] == '_') startIndex++;
     
-    while (targetIndex < startLength && target[targetIndex] == '_') {
-      targetIndex++;
-    }
+    while (targetIndex < startLength && target[targetIndex] == '_') targetIndex++;
     
     
     if (
