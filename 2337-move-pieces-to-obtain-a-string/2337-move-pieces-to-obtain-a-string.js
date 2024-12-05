@@ -4,34 +4,29 @@
  * @return {boolean}
  */
 var canChange = function(start, target) {
-  const startQueue = [];
-  const targetQueue = [];
-  
-  for (let i = 0; i < start.length; i++) {
-    if (start[i] != '_') {
-      startQueue.push([start[i], i]);
+  let startLength = start.length;
+  let [startIndex, targetIndex] = [0, 0];
+
+  while (startIndex < startLength || targetIndex < startLength) {
+    while (startIndex < startLength && start[startIndex] == '_') {
+      startIndex++;
     }
     
-    if (target[i] != '_') {
-      targetQueue.push([target[i], i]);
+    while (targetIndex < startLength && target[targetIndex] == '_') {
+      targetIndex++;
     }
-  }
-  
-  if (startQueue.length != targetQueue.length) {
-    return false;
-  }
-
-  while (startQueue.length != 0) {
-    const [startChar, startIndex] = startQueue.pop();
-    const [targetChar, targetIndex] = targetQueue.pop();
+    
     
     if (
-      startChar != targetChar
-      || (startChar === 'L' && startIndex < targetIndex)
-      || (startChar === 'R' && startIndex > targetIndex)
+      start[startIndex] != target[targetIndex]
+      || (start[startIndex] === 'L' && startIndex < targetIndex)
+      || (start[startIndex] === 'R' && startIndex > targetIndex)
     ) {
       return false;
     }
+    
+    startIndex++;
+    targetIndex++;
   }
 
   return true;
