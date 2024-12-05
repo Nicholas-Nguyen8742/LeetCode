@@ -1,6 +1,5 @@
 function canChange(start: string, target: string): boolean {
-  let startLength = start.length;
-  let [startIndex, targetIndex] = [0, 0];
+  let startLength = start.length, [startIndex, targetIndex] = [0, 0];
 
   while (startIndex < startLength || targetIndex < startLength) {
     while (startIndex < startLength && start[startIndex] == '_') startIndex++;
