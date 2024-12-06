@@ -4,11 +4,10 @@
  */
 var rotate = function(matrix) {
   const matrixRef = structuredClone(matrix);
-  const COLUMNS = matrix[0].length;
-  const ROWS = matrix.length;
+  const LENGTH = matrix.length;
 
-  for (let refColumnIndex = COLUMNS - 1, rowIndex = 0; rowIndex < ROWS; rowIndex++, refColumnIndex--) {
-    for (let refRowIndex = 0, columnIndex = 0; columnIndex < COLUMNS; columnIndex++, refRowIndex++) {
+  for (let refColumnIndex = matrix[0].length - 1, rowIndex = 0; rowIndex < LENGTH; rowIndex++, refColumnIndex--) {
+    for (let refRowIndex = 0, columnIndex = 0; columnIndex < LENGTH; columnIndex++, refRowIndex++) {
       matrix[refRowIndex][refColumnIndex] = matrixRef[rowIndex][columnIndex];
     }
   }
