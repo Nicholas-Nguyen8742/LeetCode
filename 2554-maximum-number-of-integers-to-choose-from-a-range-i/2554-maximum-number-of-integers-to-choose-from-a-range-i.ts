@@ -3,17 +3,20 @@ function maxCount(banned: number[], n: number, maxSum: number): number {
   const set = new Set(banned);
   let count = 0;  
 
-  for (let i = 1; i < target; i++) {
-    if (set.has(i)) {
+  let num = 1;
+  while (num < target) {
+    if (set.has(num)) {
+      num++;
       continue;
     }
     
-    if (maxSum - i < 0) {
+    if (maxSum - num < 0) {
       return count;
     }
 
-    maxSum -= i;
+    maxSum -= num;
     count++;
+    num++;
   }
 
   return count;
