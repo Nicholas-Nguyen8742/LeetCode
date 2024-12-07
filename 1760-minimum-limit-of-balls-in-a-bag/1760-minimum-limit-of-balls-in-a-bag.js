@@ -11,7 +11,7 @@ var minimumSize = function(nums, maxOperations) {
     if (isPossible(middle, nums, maxOperations)) {
       right = middle;
     } else {
-      left = middle + 1; // Try a larger value
+      left = middle + 1;
     }
   }
 
