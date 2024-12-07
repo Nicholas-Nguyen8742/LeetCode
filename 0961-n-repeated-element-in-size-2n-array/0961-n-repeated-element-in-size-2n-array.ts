@@ -1,11 +1,11 @@
 function repeatedNTimes(nums: number[]): number {
-  const set = new Set();
+  let hash = {};
   for (const num of nums) {
-    if (set.has(num)) {
+    if (num in hash) {
       return num;
     }
 
-    set.add(num);
+    hash[num] = num;
   }
 
   return -1;
