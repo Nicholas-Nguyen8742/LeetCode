@@ -5,7 +5,7 @@
 var repeatedNTimes = function(nums) {
   let hash = {};
   for (const num of nums) {
-    if (hash[num] != null) {
+    if (isNotNull(hash[num])) {
       return num;
     }
 
@@ -13,4 +13,8 @@ var repeatedNTimes = function(nums) {
   }
 
   return -1;
+};
+
+var isNotNull = function(value) {
+  return value != null;
 };
