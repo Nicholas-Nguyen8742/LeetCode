@@ -1,7 +1,7 @@
 function repeatedNTimes(nums: number[]): number {
   let hash = {};
   for (const num of nums) {
-    if (num in hash) {
+    if (hash[num] != null) {
       return num;
     }
 
