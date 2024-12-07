@@ -3,7 +3,7 @@
  * @param {number} maxOperations
  * @return {number}
  */
-var minimumSize = function(nums, maxOperations, max = 0) {
+var minimumSize = function(nums, maxOperations) {
   let left = 1, right = Math.max(...nums);
 
   while (left < right) {
