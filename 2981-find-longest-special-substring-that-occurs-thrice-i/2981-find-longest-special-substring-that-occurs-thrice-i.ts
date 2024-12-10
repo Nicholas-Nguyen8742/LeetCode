@@ -16,12 +16,16 @@ function maximumLength(s: string): number {
     }
   }
 
-  let ans = -1;
+  let result = 0;
   for (const [str, freq] of count.entries()) {
-    if (freq >= 3 && str.length > ans) {
-      ans = str.length;
+    if (freq >= 3 && str.length > result) {
+      result = str.length;
     }
   }
+  
+  if (result == 0) {
+    return -1;
+  }
 
-  return ans;
+  return result;
 };
