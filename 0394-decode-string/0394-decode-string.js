@@ -3,7 +3,7 @@
  * @return {string}
  */
 var decodeString = function(s) {
-  let stack = [];
+  const stack = [];
   let resultString = '';
   let currentNumber = 0;
 
