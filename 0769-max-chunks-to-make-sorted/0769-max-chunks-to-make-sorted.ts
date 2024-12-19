@@ -1,6 +1,5 @@
 function maxChunksToSorted(arr: number[]): number {
-  let chunks = 0;
-  let max = 0;
+  let chunks = 0, max = 0;
   
   for (let i = 0; i < arr.length; i++) {
     max = Math.max(arr[i], max);
