@@ -4,9 +4,7 @@ function maxChunksToSorted(arr: number[]): number {
   
   for (let i = 0; i < arr.length; i++) {
     max = Math.max(arr[i], max);
-    if (max === i) {
-      chunks++;
-    }
+    if (max === i) chunks++;
   }
   return chunks;
 };
