@@ -8,9 +8,7 @@ var balancedStringSplit = function(s) {
   while (i < s.length) {
     s[i] === 'L' ? balanceCount++ : balanceCount--;
 
-    if (balanceCount === 0) {
-      result++;
-    }
+    if (balanceCount === 0) result++;
     
     i++;
   }
