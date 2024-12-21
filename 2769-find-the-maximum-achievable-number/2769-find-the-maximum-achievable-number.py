@@ -1,3 +1,3 @@
-function theMaximumAchievableX(num: number, t: number): number {
-  return num + t * 2;
-};
+class Solution:
+    def theMaximumAchievableX(self, num: int, t: int) -> int:
+        return num + t * 2;
