@@ -3,15 +3,12 @@
  * @return {number}
  */
 var balancedStringSplit = function(s) {
-  let balanceCount = 0, result = 0, i = 0;
-
-  while (i < s.length) {
-    s[i] === 'L' ? balanceCount++ : balanceCount--;
-
+  let balanceCount = 0, result = 0;
+  
+  for (let i = 0, increment = (char) => char === 'L' ? balanceCount++ : balanceCount--; i < s.length; i++) {
+    increment(s[i]);
     if (balanceCount === 0) result++;
-    
-    i++;
-  }
+  } 
   
   return result;
 };
