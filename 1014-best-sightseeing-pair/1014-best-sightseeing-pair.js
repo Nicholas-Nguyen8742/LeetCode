@@ -3,8 +3,6 @@
  * @return {number}
  */
 var maxScoreSightseeingPair = function(values) {
-  const length = values.length;
-
   let max = 0, maxLeftScore = values[0];
         
   for (let i = 1; i < values.length; i++) {
