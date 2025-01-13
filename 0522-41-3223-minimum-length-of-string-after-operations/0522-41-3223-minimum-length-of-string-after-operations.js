@@ -6,8 +6,7 @@ var minimumLength = function(s) {
     const frequency = new Map();
     let toDeleteCount = 0;
 
-    for (let i = 0; i < s.length; i++) {
-        const char = s[i];
+    for (const char of s) {
         if (frequency.has(char)) {
             frequency.set(char, frequency.get(char) + 1);
         } else {
