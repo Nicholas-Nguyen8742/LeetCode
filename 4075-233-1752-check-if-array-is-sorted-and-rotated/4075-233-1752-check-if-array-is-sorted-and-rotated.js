@@ -11,9 +11,5 @@ var check = function(nums) {
     }
   }
 
-  if (count > 1 || (count === 1 && nums[0] < nums[length])) {
-    return false;
-  }
-
-  return true;
+  return !(count > 1 || (count === 1 && nums[0] < nums[length]));
 };
