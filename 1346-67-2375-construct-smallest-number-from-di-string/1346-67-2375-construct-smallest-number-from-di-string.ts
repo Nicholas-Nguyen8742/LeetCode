@@ -7,7 +7,7 @@ function smallestNumber(pattern: string): string {
   return sm.result.reverse().join('');
 };
 
-smallestNumber.prototype.buildSequence = function(currentIndex, currentCount, p) {
+smallestNumber.prototype.buildSequence = function(currentIndex: number, currentCount: number, p: string): number {
   if (currentIndex != p.length) {
     if (p[currentIndex] === 'I') {
       this.buildSequence(currentIndex + 1, currentIndex + 1, p);
