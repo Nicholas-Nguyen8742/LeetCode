@@ -1,6 +1,6 @@
 function applyOperations(nums: number[]): number[] {
-  let zeros = [];
-  let result = [];
+  const zeros = [];
+  const result = [];
 
   for (let i = 0; i < nums.length; i++) {
     let curr = nums[i];
@@ -17,5 +17,5 @@ function applyOperations(nums: number[]): number[] {
     }
   }
 
-  return [...result, ...zeros]
+  return [...result, ...zeros];
 };
