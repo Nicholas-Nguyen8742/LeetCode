@@ -19,5 +19,5 @@ var applyOperations = function(nums) {
     }
   }
 
-  return result.concat(new Array(zeros).fill(0));
+  return [...result, ...(new Array(zeros).fill(0))];
 };
