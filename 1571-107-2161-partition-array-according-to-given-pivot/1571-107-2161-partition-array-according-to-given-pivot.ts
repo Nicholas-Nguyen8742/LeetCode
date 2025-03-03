@@ -10,9 +10,10 @@ function pivotArray(nums: number[], pivot: number): number[] {
 
     if (currentNum < pivot) {
       left.push(currentNum);
-    } else {
-      right.push(currentNum);
+      continue;
     }
+    
+    right.push(currentNum);
   }
 
   return left.concat(Array(pivots).fill(pivot)).concat(right);
