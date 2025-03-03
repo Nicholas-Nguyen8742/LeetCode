@@ -5,7 +5,10 @@ function pivotArray(nums: number[], pivot: number): number[] {
     const currentNum = nums[i];
     if (pivot === currentNum) {
       pivots++;
-    } else if (currentNum < pivot) {
+      continue;
+    }
+
+    if (currentNum < pivot) {
       left.push(currentNum);
     } else {
       right.push(currentNum);
