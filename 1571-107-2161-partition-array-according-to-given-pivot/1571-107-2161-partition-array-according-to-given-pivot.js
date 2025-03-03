@@ -17,5 +17,5 @@ var pivotArray = function(nums, pivot) {
     }
   }
 
-  return [...left, ...Array(pivots).fill(pivot), ...right];
+  return left.concat(Array(pivots).fill(pivot)).concat(right);
 };
