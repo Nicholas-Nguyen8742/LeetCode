@@ -4,7 +4,5 @@ function coloredCells(n: number, rollingSum = 1):number {
   }
   
   const currN = n - 1;
-  rollingSum = rollingSum + (4 * currN);
-
-  return coloredCells(currN, rollingSum);
+  return coloredCells(currN, rollingSum + (4 * currN));
 };
