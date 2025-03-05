@@ -3,14 +3,13 @@
  * @return {number}
  */
 var coloredCells = function(n) {
-  let rollingSum = 1, nthSum = 0;
+  let rollingSum = 1;
   if (n === 1) {
     return rollingSum;
   }
 
   for (let i = 2; i <= n; i++) {
-    nthSum += 4;
-    rollingSum = rollingSum + nthSum;
+    rollingSum = rollingSum + (4 * (i - 1));
   }
 
   return rollingSum;
