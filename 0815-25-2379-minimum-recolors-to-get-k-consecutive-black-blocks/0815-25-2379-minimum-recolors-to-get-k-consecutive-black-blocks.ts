@@ -13,7 +13,7 @@ function minimumRecolors(blocks: string, k: number): number {
         whitesCount--;
       }
 
-      left += 1;
+      left++;
     }
   }
 
