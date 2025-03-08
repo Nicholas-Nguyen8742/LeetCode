@@ -18,7 +18,7 @@ var minimumRecolors = function(blocks, k) {
         whitesCount--;
       }
 
-      left += 1;
+      left++;
     }
   }
 
