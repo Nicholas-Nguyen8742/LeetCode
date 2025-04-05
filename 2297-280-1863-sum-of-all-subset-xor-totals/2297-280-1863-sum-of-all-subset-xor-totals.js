@@ -4,8 +4,6 @@
  */
 var subsetXORSum = function(nums) {
   let result = 0;
-  for (const num of nums) {
-    result |= num;
-  }
+  for (const num of nums) result |= num
   return result << (nums.length - 1);
 };
