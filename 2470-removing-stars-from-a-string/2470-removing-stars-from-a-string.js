@@ -2,13 +2,13 @@
  * @param {string} s
  * @return {string}
  */
-var removeStars = function(s, str = [], i = 0) {
-  if (i === s.length) return str.join("");
-  const char = s[i];
+var removeStars = function(s, str = []) {
+  if (s.length === 0) return str.join("");
+  const char = s[0];
   if (char === '*') {
     str.pop();
   } else {
     str.push(char);
   }
-  return removeStars(s, str, i + 1);
+  return removeStars(s.substring(1, s.length), str);
 };
