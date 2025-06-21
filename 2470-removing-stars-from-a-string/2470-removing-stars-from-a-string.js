@@ -10,5 +10,5 @@ var removeStars = function(s, str = []) {
   } else {
     str.push(char);
   }
-  return removeStars(s.substring(1, s.length), str);
+  return removeStars(s.replace(char, ''), str);
 };
