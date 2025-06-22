@@ -1,19 +1,18 @@
 function divideString(s: string, k: number, fill: string): string[] {
   const partitions = [];
-  const length = s.length;
+  let curr = '';
 
-  let factors = Math.floor(length / k);
-  let i = 0;
-  while (factors) {
-    partitions.push(s.substring(i, i + k));
-    i += k;
-    factors--;
+  for (let i = 0; i < s.length; i++) {
+    if (curr.length && curr.length % k === 0) {
+      partitions.push(curr);
+      curr = s[i];
+    } else {
+      curr += s[i];
+    }
   }
-
-  const leftovers = length % k;
-  if (leftovers) {
-    const lastString = s.substring(length - leftovers, length);
-    partitions.push(`${lastString}${fill.repeat(k - lastString.length)}`);
+  
+  if (curr.length) {
+    partitions.push(`${curr}${fill.repeat(k - curr.length)}`);
   }
 
   return partitions;
