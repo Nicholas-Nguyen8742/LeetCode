@@ -6,23 +6,20 @@
  */
 var divideString = function(s, k, fill) {
   const partitions = [];
-  let curr = '';
+  const length = s.length;
 
-  for (let i = 0; i < s.length; i++) {
-    if (curr.length && curr.length % k === 0) {
-      partitions.push(curr);
-      curr = s[i];
-    } else {
-      curr += s[i];
-    }
+  let factors = Math.floor(length / k);
+  let i = 0;
+  while (factors) {
+    partitions.push(s.substring(i, i + k));
+    i += k;
+    factors--;
   }
 
-  while (curr.length % k !== 0) {
-    curr += fill;
-  }
-  
-  if (curr.length) {
-    partitions.push(curr);
+  const leftovers = length % k;
+  if (leftovers) {
+    const lastString = s.substring(length - leftovers, length);
+    partitions.push(`${lastString}${fill.repeat(k - lastString.length)}`);
   }
 
   return partitions;
