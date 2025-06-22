@@ -7,18 +7,15 @@
 var divideString = function(s, k, fill) {
   const partitions = [];
   const length = s.length;
+  const leftover = length % k;
+  const condition = leftover ? length - k : length;
 
-  let factors = Math.floor(length / k);
-  let i = 0;
-  while (factors) {
+  for (let i = 0; i < condition; i += k) {
     partitions.push(s.substring(i, i + k));
-    i += k;
-    factors--;
   }
-
-  const leftovers = length % k;
-  if (leftovers) {
-    const lastString = s.substring(length - leftovers, length);
+  
+  if (leftover) {
+    const lastString = s.substring(length - leftover, length);
     partitions.push(`${lastString}${fill.repeat(k - lastString.length)}`);
   }
 
