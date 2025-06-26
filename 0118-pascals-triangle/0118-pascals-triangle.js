@@ -6,14 +6,17 @@ var generate = function(numRows) {
   const pascal = [];
 
   for (let i = 0; i < numRows; i++) {
-    pascal[i] = new Array();
-    pascal[i][0] = 1;
+    const row = new Array(i).fill(1);
+    row[0] = 1;
+
+    const prevRow = pascal[i - 1];
   
     for (let j = 1; j < i; j++) {
-      pascal[i][j] = (pascal[i - 1][j - 1]) + (pascal[i - 1][j]);
+      row[j] = (prevRow[j - 1]) + (prevRow[j]);
     }
 
-    pascal[i][i] = 1;
+    row[i] = 1;
+    pascal.push(row);
   }
 
   return pascal;
