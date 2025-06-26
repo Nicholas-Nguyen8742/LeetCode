@@ -6,8 +6,7 @@ var generate = function(numRows) {
   const pascal = [];
 
   for (let i = 0; i < numRows; i++) {
-    const row = new Array(i).fill(1);
-    row[0] = 1;
+    const row = new Array(i + 1).fill(1);
 
     const prevRow = pascal[i - 1];
   
@@ -15,7 +14,6 @@ var generate = function(numRows) {
       row[j] = (prevRow[j - 1]) + (prevRow[j]);
     }
 
-    row[i] = 1;
     pascal.push(row);
   }
 
