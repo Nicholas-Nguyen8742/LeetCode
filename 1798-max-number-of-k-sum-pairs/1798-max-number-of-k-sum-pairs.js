@@ -10,13 +10,11 @@ var maxOperations = function(nums, k) {
 
   while (i < j) {
     const temp = nums[i] + nums[j];
-    if (temp === k) {
-      i++, j--, res++;
-    } else if (temp > k) {
-      j--;
-    } else {
-      i++;
-    }
+    if (temp === k) { i++, j--, res++; continue; }
+
+    if (temp > k) { j--; continue; }
+
+    i++;
   }
 
   return res;
