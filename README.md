@@ -6,6 +6,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Two Pointers
 |  |
 | ------- |
+| [1798-max-number-of-k-sum-pairs](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/1798-max-number-of-k-sum-pairs) |
 | [1894-merge-strings-alternately](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/1894-merge-strings-alternately) |
 ## String
 |  |
@@ -27,6 +28,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0118-pascals-triangle](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/0118-pascals-triangle) |
+| [1798-max-number-of-k-sum-pairs](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/1798-max-number-of-k-sum-pairs) |
 ## Dynamic Programming
 |  |
 | ------- |
@@ -47,4 +49,12 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [2140-longest-subsequence-repeated-k-times](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/2140-longest-subsequence-repeated-k-times) |
+## Hash Table
+|  |
+| ------- |
+| [1798-max-number-of-k-sum-pairs](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/1798-max-number-of-k-sum-pairs) |
+## Sorting
+|  |
+| ------- |
+| [1798-max-number-of-k-sum-pairs](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/1798-max-number-of-k-sum-pairs) |
 <!---LeetCode Topics End-->
