@@ -29,6 +29,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Array
 |  |
 | ------- |
+| [0055-jump-game](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/0055-jump-game) |
 | [0118-pascals-triangle](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/0118-pascals-triangle) |
 | [1621-number-of-subsequences-that-satisfy-the-given-sum-condition](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/1621-number-of-subsequences-that-satisfy-the-given-sum-condition) |
 | [1798-max-number-of-k-sum-pairs](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/1798-max-number-of-k-sum-pairs) |
@@ -37,6 +38,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Dynamic Programming
 |  |
 | ------- |
+| [0055-jump-game](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/0055-jump-game) |
 | [0118-pascals-triangle](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/0118-pascals-triangle) |
 ## Backtracking
 |  |
@@ -45,6 +47,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Greedy
 |  |
 | ------- |
+| [0055-jump-game](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/0055-jump-game) |
 | [2140-longest-subsequence-repeated-k-times](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/2140-longest-subsequence-repeated-k-times) |
 | [3743-reschedule-meetings-for-maximum-free-time-i](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/3743-reschedule-meetings-for-maximum-free-time-i) |
 ## Counting
