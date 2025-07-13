@@ -10,6 +10,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1798-max-number-of-k-sum-pairs](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/1798-max-number-of-k-sum-pairs) |
 | [1894-merge-strings-alternately](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/1894-merge-strings-alternately) |
 | [2392-successful-pairs-of-spells-and-potions](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/2392-successful-pairs-of-spells-and-potions) |
+| [2497-maximum-matching-of-players-with-trainers](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/2497-maximum-matching-of-players-with-trainers) |
 ## String
 |  |
 | ------- |
@@ -34,6 +35,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1621-number-of-subsequences-that-satisfy-the-given-sum-condition](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/1621-number-of-subsequences-that-satisfy-the-given-sum-condition) |
 | [1798-max-number-of-k-sum-pairs](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/1798-max-number-of-k-sum-pairs) |
 | [2392-successful-pairs-of-spells-and-potions](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/2392-successful-pairs-of-spells-and-potions) |
+| [2497-maximum-matching-of-players-with-trainers](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/2497-maximum-matching-of-players-with-trainers) |
 | [3743-reschedule-meetings-for-maximum-free-time-i](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/3743-reschedule-meetings-for-maximum-free-time-i) |
 ## Dynamic Programming
 |  |
@@ -49,6 +51,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- |
 | [0055-jump-game](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/0055-jump-game) |
 | [2140-longest-subsequence-repeated-k-times](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/2140-longest-subsequence-repeated-k-times) |
+| [2497-maximum-matching-of-players-with-trainers](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/2497-maximum-matching-of-players-with-trainers) |
 | [3743-reschedule-meetings-for-maximum-free-time-i](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/3743-reschedule-meetings-for-maximum-free-time-i) |
 ## Counting
 |  |
@@ -68,6 +71,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [1621-number-of-subsequences-that-satisfy-the-given-sum-condition](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/1621-number-of-subsequences-that-satisfy-the-given-sum-condition) |
 | [1798-max-number-of-k-sum-pairs](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/1798-max-number-of-k-sum-pairs) |
 | [2392-successful-pairs-of-spells-and-potions](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/2392-successful-pairs-of-spells-and-potions) |
+| [2497-maximum-matching-of-players-with-trainers](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/2497-maximum-matching-of-players-with-trainers) |
 ## Binary Search
 |  |
 | ------- |
