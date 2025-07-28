@@ -6,13 +6,13 @@ var countHillValley = function(nums) {
   let count = 0;
   const n = nums.length;
   for (let i = 1; i < n - 1; i++) {
-    if (nums[i] === nums[i - 1]) {
+    const curr = nums[i];
+    if (curr === nums[i - 1]) {
       continue;
     }
 
     let left = 0;
     for (let j = i - 1; j >= 0; j--) {
-      const curr = nums[i];
       const comparison = nums[j];
       if (comparison === curr) {
         continue;
@@ -31,7 +31,6 @@ var countHillValley = function(nums) {
 
     let right = 0;
     for (let j = i + 1; j < n; j++) {
-      const curr = nums[i];
       const comparison = nums[j];
       if (curr === comparison) {
         continue;
