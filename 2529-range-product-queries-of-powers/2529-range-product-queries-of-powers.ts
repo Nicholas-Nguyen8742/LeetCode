@@ -16,8 +16,9 @@ function productQueries(n: number, queries: number[][]): number[] {
     }
     power >>= 1;
   }
+
   const k = parts.length;
-  const prefix = Array.from({length : k}, () => Array(k).fill(0n));
+  const prefix = Array.from({ length : k }, () => Array(k).fill(0n));
   for (let i = 0; i < k; i++){
     prefix[i][i] = parts[k - 1 - i] % mod;
     for (let j = i + 1; j < k; j++){
@@ -27,7 +28,7 @@ function productQueries(n: number, queries: number[][]): number[] {
 
   const result = new Array(queries.length);
   for (let i = 0; i < queries.length; i++){
-    const [l, r]= queries[i];
+    const [l, r] = queries[i];
     result[i] = Number(prefix[l][r]);
   }
   return result;
