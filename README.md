@@ -14,6 +14,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## String
 |  |
 | ------- |
+| [0017-letter-combinations-of-a-phone-number](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/0017-letter-combinations-of-a-phone-number) |
 | [1302-delete-characters-to-make-fancy-string](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/1302-delete-characters-to-make-fancy-string) |
 | [1894-merge-strings-alternately](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/1894-merge-strings-alternately) |
 | [2140-longest-subsequence-repeated-k-times](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/2140-longest-subsequence-repeated-k-times) |
@@ -50,6 +51,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Backtracking
 |  |
 | ------- |
+| [0017-letter-combinations-of-a-phone-number](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/0017-letter-combinations-of-a-phone-number) |
 | [2140-longest-subsequence-repeated-k-times](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/2140-longest-subsequence-repeated-k-times) |
 ## Greedy
 |  |
@@ -69,6 +71,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Hash Table
 |  |
 | ------- |
+| [0017-letter-combinations-of-a-phone-number](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/0017-letter-combinations-of-a-phone-number) |
 | [1798-max-number-of-k-sum-pairs](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/1798-max-number-of-k-sum-pairs) |
 ## Sorting
 |  |
