@@ -27,6 +27,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Simulation
 |  |
 | ------- |
+| [0498-diagonal-traverse](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/0498-diagonal-traverse) |
 | [2260-divide-a-string-into-groups-of-size-k](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/2260-divide-a-string-into-groups-of-size-k) |
 | [2470-removing-stars-from-a-string](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/2470-removing-stars-from-a-string) |
 ## Array
@@ -34,6 +35,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- |
 | [0055-jump-game](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/0055-jump-game) |
 | [0118-pascals-triangle](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/0118-pascals-triangle) |
+| [0498-diagonal-traverse](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/0498-diagonal-traverse) |
 | [1621-number-of-subsequences-that-satisfy-the-given-sum-condition](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/1621-number-of-subsequences-that-satisfy-the-given-sum-condition) |
 | [1798-max-number-of-k-sum-pairs](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/1798-max-number-of-k-sum-pairs) |
 | [2316-count-hills-and-valleys-in-an-array](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/2316-count-hills-and-valleys-in-an-array) |
@@ -93,6 +95,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Matrix
 |  |
 | ------- |
+| [0498-diagonal-traverse](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/0498-diagonal-traverse) |
 | [3461-find-the-minimum-area-to-cover-all-ones-i](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/3461-find-the-minimum-area-to-cover-all-ones-i) |
 | [3648-find-the-maximum-number-of-fruits-collected](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/3648-find-the-maximum-number-of-fruits-collected) |
 ## Math
