@@ -105,6 +105,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- |
 | [0231-power-of-two](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/0231-power-of-two) |
 | [0342-power-of-four](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/0342-power-of-four) |
+| [1440-convert-integer-to-the-sum-of-two-no-zero-integers](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/1440-convert-integer-to-the-sum-of-two-no-zero-integers) |
 ## Bit Manipulation
 |  |
 | ------- |
