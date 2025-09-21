@@ -6,6 +6,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Two Pointers
 |  |
 | ------- |
+| [0026-remove-duplicates-from-sorted-array](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/0026-remove-duplicates-from-sorted-array) |
 | [1621-number-of-subsequences-that-satisfy-the-given-sum-condition](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/1621-number-of-subsequences-that-satisfy-the-given-sum-condition) |
 | [1798-max-number-of-k-sum-pairs](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/1798-max-number-of-k-sum-pairs) |
 | [1894-merge-strings-alternately](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/1894-merge-strings-alternately) |
@@ -34,6 +35,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0001-two-sum](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/0001-two-sum) |
+| [0026-remove-duplicates-from-sorted-array](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/0026-remove-duplicates-from-sorted-array) |
 | [0055-jump-game](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/0055-jump-game) |
 | [0118-pascals-triangle](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/0118-pascals-triangle) |
 | [0498-diagonal-traverse](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/0498-diagonal-traverse) |
