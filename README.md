@@ -40,6 +40,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0055-jump-game](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/0055-jump-game) |
 | [0118-pascals-triangle](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/0118-pascals-triangle) |
 | [0498-diagonal-traverse](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/0498-diagonal-traverse) |
+| [1580-shuffle-the-array](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/1580-shuffle-the-array) |
 | [1621-number-of-subsequences-that-satisfy-the-given-sum-condition](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/1621-number-of-subsequences-that-satisfy-the-given-sum-condition) |
 | [1798-max-number-of-k-sum-pairs](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/1798-max-number-of-k-sum-pairs) |
 | [2058-concatenation-of-array](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/2058-concatenation-of-array) |
