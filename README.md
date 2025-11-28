@@ -29,6 +29,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0498-diagonal-traverse](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/0498-diagonal-traverse) |
+| [2058-concatenation-of-array](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/2058-concatenation-of-array) |
 | [2260-divide-a-string-into-groups-of-size-k](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/2260-divide-a-string-into-groups-of-size-k) |
 | [2470-removing-stars-from-a-string](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/2470-removing-stars-from-a-string) |
 ## Array
@@ -41,6 +42,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0498-diagonal-traverse](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/0498-diagonal-traverse) |
 | [1621-number-of-subsequences-that-satisfy-the-given-sum-condition](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/1621-number-of-subsequences-that-satisfy-the-given-sum-condition) |
 | [1798-max-number-of-k-sum-pairs](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/1798-max-number-of-k-sum-pairs) |
+| [2058-concatenation-of-array](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/2058-concatenation-of-array) |
 | [2316-count-hills-and-valleys-in-an-array](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/2316-count-hills-and-valleys-in-an-array) |
 | [2392-successful-pairs-of-spells-and-potions](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/2392-successful-pairs-of-spells-and-potions) |
 | [2497-maximum-matching-of-players-with-trainers](https://github.com/Nicholas-Nguyen8742/LeetCode/tree/master/2497-maximum-matching-of-players-with-trainers) |
